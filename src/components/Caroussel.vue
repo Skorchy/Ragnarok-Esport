@@ -1,17 +1,43 @@
 <template>
-  <agile class="caroussel-box" :dots="false">
-    <div class="slide">
-      <img src="../assets/carousel/slide1.jpg" alt="" />
+  <div class="caroussel-box">
+    <div class="mobile-img">
+      <img src="../assets/carousel/slide2.jpg" />
     </div>
-    <div class="slide">
-      <img src="../assets/carousel/slide2.jpg" alt="" />
-    </div>
-    <div class="slide">
-      <img src="../assets/carousel/slide3.jpg" alt="" />
-    </div>
-    <template slot="prevButton"><span>prev</span> </template>
-    <template slot="nextButton">next</template>
-  </agile>
+    <agile class="caroussel-box" :dots="false" :autoplay="true" :autoplay-speed="5000">
+      <div class="slide">
+        <img src="../assets/carousel/slide2.jpg" alt />
+      </div>
+      <div class="slide">
+        <img src="../assets/carousel/slide3.jpg" alt />
+      </div>
+      <template slot="prevButton">
+        <button class="prev-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="white"
+            viewBox="0 0 24 24"
+          >
+            <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+          </svg>
+        </button>
+      </template>
+      <template slot="nextButton">
+        <button class="next-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="white"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+          </svg>
+        </button>
+      </template>
+    </agile>
+  </div>
 </template>
 
 <script>
@@ -19,23 +45,58 @@ import { VueAgile } from "vue-agile";
 
 export default {
   components: {
-    agile: VueAgile,
-  },
+    agile: VueAgile
+  }
 };
 </script>
 
 <style scoped>
+.mobile-img {
+  display: none;
+}
 .caroussel-box {
   background-color: rgb(0, 133, 133);
   height: 700px;
   width: 100%;
+  overflow: hidden;
 }
 .slide {
+  display: block;
   height: 700px;
-  background-size: cover;
+  object-fit: cover;
+  width: 100%;
 }
-prev-button {
-  color: red;
-  font-size: 20px;
+.prev-button,
+.next-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 80px;
+  transition-duration: 0.3s;
+}
+.prev-button:hover,
+.next-button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+.prev-button {
+  left: 0;
+}
+.next-button {
+  right: 0;
+}
+@media (max-width: 768px) {
+  .caroussel-box {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+    width: 100%;
+  }
 }
 </style>

@@ -44,6 +44,9 @@ export default {};
   justify-content: space-between;
   box-sizing: border-box;
   overflow: hidden;
+  -webkit-box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
 }
 .texte-side {
   width: 50%;
@@ -51,5 +54,40 @@ export default {};
 .rightside-img {
   margin: 0;
   width: 700px;
+}
+@media (max-width: 1024px) {
+  .association-box {
+    max-height: 600px;
+  }
+  .texte-side {
+    width: 50%;
+  }
+  .img-side {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .association-box {
+    max-height: 700px;
+  }
+  .texte-side {
+    width: 50%;
+  }
+  .img-side {
+    width: 40%;
+  }
+}
+@media (max-width: 415px) {
+  .association-box {
+    flex-direction: column;
+    max-height: unset;
+  }
+  .texte-side {
+    width: 90%;
+  }
+  .img-side {
+    width: 100%;
+    height: 400px;
+  }
 }
 </style>

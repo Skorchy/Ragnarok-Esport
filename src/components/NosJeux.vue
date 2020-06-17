@@ -8,28 +8,28 @@
         data-aos="fade-up"
         data-aos-duration="1500"
         id="blason-Valorant"
-        src="../assets/blasons/blason_valorant.png"
+        src="../assets/blasons/blason_RL_gold.png"
       />
       <img
         class="blason"
         data-aos="fade-down"
         data-aos-duration="1500"
         id="blason-LoL"
-        src="../assets/blasons/blason_LoL.png"
+        src="../assets/blasons/blason_RL_gold.png"
       />
       <img
         class="blason"
         data-aos="fade-up"
         data-aos-duration="1500"
         id="blason-RL"
-        src="../assets/blasons/blason_RL.png"
+        src="../assets/blasons/blason_RL_gold.png"
       />
       <img
         class="blason"
         data-aos="fade-down"
         data-aos-duration="1500"
         id="blason-FN"
-        src="../assets/blasons/blason_FN.png"
+        src="../assets/blasons/blason_RL_gold.png"
       />
     </div>
     <button class="nosjeux-button" type="button">Nos Équipes</button>
@@ -47,7 +47,7 @@ export default {};
 
 <style lang="scss" scoped>
 .nosjeux-box {
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(19, 19, 19);
   min-height: 400px;
   width: 100%;
   box-sizing: border-box;
@@ -75,6 +75,31 @@ export default {};
 .nosjeux-hr {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .blasons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nosjeux-titre {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .nosjeux-hr {
+    display: block;
+    width: 50%;
+    margin-bottom: 60px;
+  }
+  #blason-Valorant,
+  #blason-RL {
+    padding-left: 250px;
+  }
+  #blason-LoL,
+  #blason-FN {
+    padding-right: 250px;
+  }
+}
+
 @media (max-width: 415px) {
   .blasons {
     flex-direction: column;

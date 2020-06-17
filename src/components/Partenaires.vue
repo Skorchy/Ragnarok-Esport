@@ -5,7 +5,7 @@
       <RGKPartnerBox
         class="partner-box"
         name="OneXWear"
-        data-aos="zoom-out-left"
+        data-aos="zoom-in"
         data-aos-duration="3000"
         imgName="onexwear"
         partnerLink="https://onexwear.co"
@@ -13,7 +13,7 @@
       <RGKPartnerBox
         class="partner-box"
         name="FragCase"
-        data-aos="zoom-out-right"
+        data-aos="zoom-in"
         data-aos-duration="3000"
         imgName="fragcase"
         partnerLink="https://fragcase.com"
@@ -58,7 +58,7 @@ export default {
   justify-content: space-evenly;
   margin-bottom: 50px;
 }
-@media (max-width: 415px) {
+@media (max-width: 768px) {
   .parteraires-conteneur {
     flex-direction: column;
   }

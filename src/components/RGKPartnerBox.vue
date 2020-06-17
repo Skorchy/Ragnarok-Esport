@@ -29,7 +29,7 @@
       <a :href="partnerLink" target="_blank">
         <em>
           Site de
-          <span style="color: rgba(102, 44, 129, 0.76) ">
+          <span style="color: #792048 ">
             <strong>{{name}}</strong>
           </span>
         </em>
@@ -69,6 +69,7 @@ export default {
   height: 400px;
   background-color: #fff;
   border-radius: 5px;
+  border-left: 8px solid #bd2828;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.5), 0 5px 8px 0 rgba(0, 0, 0, 0.5),
     0 1px 14px 0 rgba(0, 0, 0, 0.5);
 
@@ -77,32 +78,10 @@ export default {
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-.box::after {
-  content: "";
-  border-radius: 5px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.box:hover {
   box-shadow: 0 9px 11px -5px rgba(0, 0, 0, 0.7),
     0 18px 28px 2px rgba(0, 0, 0, 0.7), 0 7px 34px 6px rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-.box:hover {
-  -webkit-transform: scale(1.03, 1.03);
-  transform: scale(1.03, 1.03);
-}
-
-.box:hover::after {
-  opacity: 1;
-}
-
 .box .colored {
   display: none;
 }
@@ -138,11 +117,6 @@ export default {
 .partner-link a {
   text-decoration: none;
   color: grey;
-}
-@media (max-width: 415px) {
-  .box {
-    width: 360px;
-  }
 }
 @media (max-width: 768px) {
   .box {
