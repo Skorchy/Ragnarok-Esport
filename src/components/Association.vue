@@ -1,27 +1,15 @@
 <template>
   <div class="association-box">
-    <div class="texte-side">
-      <h1>QUI SOMMES NOUS ?</h1>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      </p>
-      <p>
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-        modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
-        commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-      </p>
+    <div class="texte-side" data-aos="fade-up" data-aos-duration="1500">
+      <RgkH1 class="association-title">QUI SOMMES NOUS ?</RgkH1>
+      <p
+        class="association-content"
+      >Ragnarök Esport est une jeune structure regroupant un groupe de joueurs francophones réunis autour d'un même but : conquérir le monde de l'esport.</p>
+      <p
+        class="association-content"
+      >Créée en 2020, la structure ne cesse d'évoluer et de grandir au fil du temps. Avec l'aide de plus de 30 membres, nous mettons chacunes et chacuns nos compétences en action afin de dévolopper au mieux notre marque. Entraide et motivation sont les maitres mots au sein de notre association.</p>
     </div>
-    <div class="img-side">
+    <div class="img-side" data-aos="fade-down" data-aos-duration="1500">
       <img class="rightside-img" src="../assets/whoarewe-img.jpg" />
     </div>
   </div>
@@ -31,12 +19,24 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
-export default {};
+import RgkH1 from "@/components/RgkH1.vue";
+export default {
+  components: {
+    RgkH1
+  }
+};
 </script>
 
 <style scoped>
 .association-box {
-  background-color: rgb(35, 0, 133);
+  background-image: linear-gradient(
+    to right bottom,
+    #004144,
+    #004447,
+    #00474a,
+    #014b4e,
+    #014e51
+  );
   max-height: 500px;
   width: 100%;
   display: flex;
@@ -44,12 +44,24 @@ export default {};
   justify-content: space-between;
   box-sizing: border-box;
   overflow: hidden;
+  text-align: center;
   -webkit-box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
   box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
 }
 .texte-side {
-  width: 50%;
+  width: 70%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.association-title {
+  margin-bottom: 80px;
+}
+.association-content {
+  font-family: "metropolis_extralight";
+  font-size: 18px;
+  font-weight: 600;
+  color: #d6d5d5;
 }
 .rightside-img {
   margin: 0;

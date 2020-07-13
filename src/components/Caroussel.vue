@@ -90,6 +90,7 @@ export default {
 .next-button {
   right: 0;
 }
+
 @media (max-width: 768px) {
   .caroussel-box {
     display: none;

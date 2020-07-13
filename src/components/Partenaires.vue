@@ -1,12 +1,12 @@
 <template>
   <div class="partenaires-boxes">
-    <h1 class="partenaires-titre">NOS PARTENAIRES</h1>
+    <RgkH1 class="partenaires-titre">NOS PARTENAIRES</RgkH1>
     <div class="parteraires-conteneur">
       <RGKPartnerBox
         class="partner-box"
         name="OneXWear"
         data-aos="zoom-in"
-        data-aos-duration="3000"
+        data-aos-duration="500"
         imgName="onexwear"
         partnerLink="https://onexwear.co"
       />
@@ -14,7 +14,7 @@
         class="partner-box"
         name="FragCase"
         data-aos="zoom-in"
-        data-aos-duration="3000"
+        data-aos-duration="500"
         imgName="fragcase"
         partnerLink="https://fragcase.com"
       />
@@ -24,6 +24,7 @@
 
 <script>
 import RGKPartnerBox from "@/components/RGKPartnerBox.vue";
+import RgkH1 from "@/components/RgkH1.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -31,14 +32,16 @@ AOS.init();
 
 export default {
   components: {
-    RGKPartnerBox
+    RGKPartnerBox,
+    RgkH1
   }
 };
 </script>
 
 <style scoped>
 .partenaires-boxes {
-  background-color: rgb(0, 133, 44);
+  background-image: url("../assets/esport-stadium.jpg");
+  background-size: cover;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -47,8 +50,8 @@ export default {
   flex-direction: column;
 }
 .partenaires-titre {
-  margin-top: 20px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 .parteraires-conteneur {
   width: 100%;

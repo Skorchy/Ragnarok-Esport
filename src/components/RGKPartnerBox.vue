@@ -69,7 +69,7 @@ export default {
   height: 400px;
   background-color: #fff;
   border-radius: 5px;
-  border-left: 8px solid #bd2828;
+  border-bottom: 8px solid #bd2828;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.5), 0 5px 8px 0 rgba(0, 0, 0, 0.5),
     0 1px 14px 0 rgba(0, 0, 0, 0.5);
 
