@@ -48,7 +48,7 @@ export default {};
   flex-direction: column;
   align-items: center;
   width: 50%;
-  color: #fafafa;
+  color: #ebebeb;
   font-family: "disket_monobold";
   text-align: center;
 }

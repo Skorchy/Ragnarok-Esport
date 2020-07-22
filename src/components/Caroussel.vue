@@ -1,14 +1,23 @@
 <template>
   <div class="caroussel-box">
     <div class="mobile-img">
-      <img src="../assets/carousel/slide2.jpg" />
+      <img src="../assets/carousel/slide1.png" />
     </div>
-    <agile class="caroussel-box" :dots="false" :autoplay="true" :autoplay-speed="5000">
+    <agile
+      class="caroussel-box"
+      :dots="false"
+      :autoplay="true"
+      :autoplay-speed="5000"
+      :centermode="true"
+    >
       <div class="slide">
-        <img src="../assets/carousel/slide2.jpg" alt />
+        <img src="../assets/carousel/slide1.png" alt />
       </div>
       <div class="slide">
-        <img src="../assets/carousel/slide3.jpg" alt />
+        <img src="../assets/carousel/slide2.png" alt />
+      </div>
+      <div class="slide">
+        <img src="../assets/carousel/slide3.png" alt />
       </div>
       <template slot="prevButton">
         <button class="prev-button">
@@ -16,7 +25,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="30"
-            fill="white"
+            fill="#EBEBEB"
             viewBox="0 0 24 24"
           >
             <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
@@ -29,7 +38,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="30"
-            fill="white"
+            fill="#EBEBEB"
             viewBox="0 0 24 24"
           >
             <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
@@ -55,15 +64,33 @@ export default {
   display: none;
 }
 .caroussel-box {
-  background-color: rgb(0, 133, 133);
+  background: rgb(250, 250, 250);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(250, 250, 250, 1) 20%,
+    rgba(50, 193, 173, 1) 80%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(250, 250, 250, 1) 20%,
+    rgba(50, 193, 173, 1) 80%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(250, 250, 250, 1) 20%,
+    rgba(50, 193, 173, 1) 80%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa",endColorstr="#32c1ad",GradientType=1);
   height: 700px;
   width: 100%;
   overflow: hidden;
 }
 .slide {
-  display: block;
+  display: flex;
   height: 700px;
-  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
 }
 .prev-button,

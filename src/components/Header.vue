@@ -2,7 +2,7 @@
   <div class="header-box">
     <div class="left-side-header">
       <span class="menu-buttons">
-        <router-link class="routerlink" :to="{ name : 'WIP' }">
+        <router-link class="routerlink" :to="{ name : 'Ragnarok' }">
           <em class="first-letter">R</em>agnaröK
           <em class="first-letter">E</em>sport
         </router-link>
@@ -134,7 +134,7 @@ export default {
 .routerlink {
   font-family: "azonixregular";
   text-decoration: none;
-  color: white;
+  color: #ebebeb;
   transition: 0.3s;
 }
 
@@ -168,13 +168,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid white;
+  border: 2px solid #ebebeb;
   background-color: #121212;
 
   span {
     margin-bottom: 5px;
     margin-top: 5px;
-    color: white;
+    color: #ebebeb;
   }
 }
 

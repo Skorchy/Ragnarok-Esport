@@ -33,7 +33,9 @@
       />
     </div>
     <button class="nosjeux-button" type="button">
-      <div class="unskewed-text">Nos Équipes</div>
+      <div class="unskewed-text">
+        <router-link :to="{ name: 'Ragnarok#ragnarok-teams' }">Nos Équipes</router-link>
+      </div>
     </button>
   </div>
 </template>
@@ -62,9 +64,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: #ebebeb;
+  -webkit-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
 }
 .nosjeux-titre {
+  padding-top: 30px;
   margin-bottom: 80px;
 }
 .blasons {

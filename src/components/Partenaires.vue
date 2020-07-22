@@ -5,16 +5,12 @@
       <RGKPartnerBox
         class="partner-box"
         name="OneXWear"
-        data-aos="zoom-in"
-        data-aos-duration="500"
         imgName="onexwear"
         partnerLink="https://onexwear.co"
       />
       <RGKPartnerBox
         class="partner-box"
         name="FragCase"
-        data-aos="zoom-in"
-        data-aos-duration="500"
         imgName="fragcase"
         partnerLink="https://fragcase.com"
       />
@@ -48,6 +44,9 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .partenaires-titre {
   margin-top: 30px;

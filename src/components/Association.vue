@@ -45,9 +45,9 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
   text-align: center;
-  -webkit-box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .texte-side {
   width: 70%;
