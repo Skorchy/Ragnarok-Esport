@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .ragnarok-box {
   display: flex;
   align-items: center;
@@ -99,15 +99,15 @@ export default {
   border: 1px thin #000000;
 }
 .sep-rl {
-  background-image: url("../assets/separators/rl-separator.png");
+  background-image: url("../assets/separators/RL-final-sep.png");
 }
 .sep-lol {
-  background-image: url("../assets/separators/lol-separator.png");
+  background-image: url("../assets/separators/lol-final-sep.png");
 }
 .sep-valorant {
-  background-image: url("../assets/separators/valorant-separator.png");
+  background-image: url("../assets/separators/valorant-final-sep.png");
 }
 .sep-ftn {
-  background-image: url("../assets/separators/ftn-separator-2.png");
+  background-image: url("../assets/separators/ftn-final-sep.png");
 }
 </style>

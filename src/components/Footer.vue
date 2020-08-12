@@ -34,7 +34,7 @@
     </div>
     <hr class="separator" />
     <div class="disclaimer">
-      <span>© Ragnarok Esport, 2020</span>
+      <span>© 2020 RAGNAROK ESPORT - TOUS DROITS RÉSERVÉS</span>
       <span>
         Développé par
         <em class="blue">
