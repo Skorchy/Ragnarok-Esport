@@ -30,23 +30,17 @@
       </div>
       <div class="ragnarok-teams">
         <RgkH1 class="ragnarok-header">Nos équipes</RgkH1>
-        <div class="separator sep-rl"></div>
-        <div class="ragnarok-rl-teams">
-          <RgkTeam />
-        </div>
-        <div class="separator sep-lol"></div>
-        <div class="ragnarok-lol-teams">
-          <RgkTeam />
-          <RgkTeam />
-        </div>
-        <div class="separator sep-valorant"></div>
-        <div class="ragnarok-valorant-teams">
-          <RgkTeam />
-        </div>
-        <div class="separator sep-ftn"></div>
-        <div class="ragnarok-ftn-teams">
-          <RgkTeam />
-        </div>
+
+        <template v-for="game in games">
+          <div
+            :key="'separator-'+game.game"
+            class="separator"
+            :style="{ 'background-image': `url('${require(`../assets/separators/${game.game}-final-sep.png`)}')`}"
+          ></div>
+          <div v-for="team in game.teams" :key="team.name">
+            <RgkTeam :team="team" />
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -55,10 +49,16 @@
 <script>
 import RgkH1 from "@/components/RgkH1.vue";
 import RgkTeam from "@/components/RgkTeam.vue";
+import rgkGames from "@/rgkGames.js";
 export default {
   components: {
     RgkH1,
     RgkTeam
+  },
+  computed: {
+    games() {
+      return rgkGames;
+    }
   }
 };
 </script>
@@ -91,23 +91,10 @@ export default {
 .separator {
   width: 1450px;
   height: 100px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   border-radius: 10px 0px 10px 0px;
   -moz-border-radius: 10px 0px 10px 0px;
   -webkit-border-radius: 10px 0px 10px 0px;
-  border: 1px thin #000000;
-}
-.sep-rl {
-  background-image: url("../assets/separators/RL-final-sep.png");
-}
-.sep-lol {
-  background-image: url("../assets/separators/lol-final-sep.png");
-}
-.sep-valorant {
-  background-image: url("../assets/separators/valorant-final-sep.png");
-}
-.sep-ftn {
-  background-image: url("../assets/separators/ftn-final-sep.png");
+  border: 3px solid #32c1ad;
 }
 </style>

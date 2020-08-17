@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .social-networks {
   min-height: 200px;
   background-image: linear-gradient(

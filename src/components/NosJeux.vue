@@ -34,7 +34,7 @@
     </div>
     <button class="nosjeux-button" type="button">
       <div class="unskewed-text">
-        <router-link :to="{ name: 'Ragnarok#ragnarok-teams' }">Nos Équipes</router-link>
+        <router-link class="button-router" :to="{ name: 'Ragnarok#ragnarok-teams' }">Nos Équipes</router-link>
       </div>
     </button>
   </div>
@@ -128,6 +128,10 @@ export default {
   -webkit-box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
+}
+.button-router {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
 }
 .unskewed-text {
   -moz-transform: skew(30deg, 0deg);
