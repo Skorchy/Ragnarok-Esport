@@ -81,7 +81,7 @@ export default [
     ],
   },
   {
-    game: "rl",
+    game: "rocketleague",
     teams: [
       {
         name: "rlTeam",
