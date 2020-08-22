@@ -6,6 +6,7 @@ import Partners from "../views/Partners.vue";
 import Recrutements from "../views/Recrutements.vue";
 import WebTv from "../views/WebTv.vue";
 import WIP from "../views/WIP.vue";
+import store from "../store/index.js";
 Vue.use(VueRouter);
 
 const routes = [
@@ -55,6 +56,11 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  store.commit("closeSidebar");
+  next();
 });
 
 export default router;

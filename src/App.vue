@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ 'prevent-scroll': $store.state.isSidebarDisplayed }">
     <Header />
     <router-view />
     <Footer />
@@ -16,6 +16,10 @@ export default {
 };
 </script>
 <style lang="scss">
+.prevent-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 @font-face {
   font-family: "azonixregular";
   src: url("assets/fonts/azonix/azonix-webfont.woff2") format("woff2"),
