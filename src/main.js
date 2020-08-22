@@ -4,10 +4,13 @@ import router from "./router";
 import store from "./store";
 
 import VueAgile from "vue-agile";
+import ragnarokConfig from "./config/config.js";
 
 Vue.use(VueAgile);
 
 Vue.config.productionTip = false;
+
+Vue.prototype.$rgk = ragnarokConfig;
 
 new Vue({
   router,

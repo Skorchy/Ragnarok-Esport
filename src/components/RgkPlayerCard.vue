@@ -2,17 +2,27 @@
   <div class="rgk-card">
     <div
       class="top"
-      :style="{ 'backgroundImage': `url('${require(`../assets/playerCards/playerCharacters/${player.character}.jpg`)}')`}"
-    ></div>
+      :style="{ 'backgroundImage': `url('${require(`../assets/playerCards/playerCharacters/${player.character}`)}')`}"
+    >
+      <span class="player-fonction">{{player.fonction}}</span>
+    </div>
     <div class="bottom">
       <div
         class="avatar"
         :style="{ 'backgroundImage': `url('${require(`../assets/playerCards/playerAvatar/${player.avatar}`)}')`}"
       ></div>
       <div class="player-infos">
-        <h4 class="player-nickname">{{player.prenom}} "{{player.pseudo}}" {{player.nom}}</h4>
+        <h4 class="player-nickname">
+          {{player.prenom}} "
+          <span class="blue">{{player.pseudo}}</span>
+          " {{player.nom}}
+        </h4>
         <p class="content">Âge : {{age}}</p>
-        <p class="content">Rôle : {{player.fonction}}</p>
+        <p class="content player-elo" v-if="player.elo">
+          MMR :
+          <img class="rank-ico" :src="`${require(`../assets/lolranks/${player.elo}.png`)}`" />
+        </p>
+        <p class="content" v-if="player.peak">MMR : {{player.peak}}</p>
       </div>
       <div class="player-links">
         <svg
@@ -66,29 +76,44 @@ export default {
 
 <style scoped>
 .rgk-card {
-  border-radius: 5px;
-  width: 300px;
-  min-height: 400px;
+  width: calc(100% - 10px);
+  max-width: 350px;
+  min-height: 415px;
   overflow: hidden;
-  border: 3px solid black;
   margin: 0 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 193, 174, 1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(50, 193, 174, 1);
+  box-shadow: 0px 0px 10px 0px rgba(50, 193, 174, 1);
+  transition: all 0.15s ease-in-out;
+  border: 2px solid #32c1ad;
+}
+.rgk-card:hover {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 193, 174, 1);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(50, 193, 174, 1);
+  box-shadow: 0px 0px 15px 0px rgba(50, 193, 174, 1);
+}
+.blue {
+  color: #32c1ad;
 }
 .top {
-  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 180px;
   background-size: cover;
   border: 0;
 }
 .bottom {
-  min-height: 280px;
-  background: #32c1ad;
+  min-height: 235px;
+  background: #202020;
   position: relative;
-  border-top: 2px solid black;
+  border-top: 1px solid #32c1ad;
 }
 .avatar {
   height: 100px;
   width: 100px;
-  border: 1px solid black;
+  border: 2px solid #32c1ad;
   background: #101010;
   background-size: cover;
   position: absolute;
@@ -101,11 +126,23 @@ export default {
   width: 100%;
 }
 .player-infos {
-  padding-top: 70px;
-  margin-bottom: 30px;
+  padding-top: 50px;
+  margin-bottom: 10px;
 }
 .player-nickname {
   text-align: center;
+  font-family: "azonixregular";
+}
+.player-fonction {
+  font-size: 40px;
+  padding-bottom: 55px;
+  font-family: "azonixregular";
+  color: #f0f0f0;
+  text-shadow: 3px 3px 0px rgba(15, 15, 15, 0.9);
+}
+.player-elo {
+  display: flex;
+  align-items: center;
 }
 .content {
   padding-left: 10px;
@@ -115,9 +152,20 @@ export default {
   width: 100%;
   justify-content: center;
 }
+.rank-ico {
+  width: 25px;
+  height: 25px;
+  padding-left: 10px;
+}
 .icos {
   width: 30px;
   height: 30px;
   margin: 10px;
+  fill: #32c1ad;
+}
+@media (max-width: 768px) {
+  .rgk-card {
+    margin: 10px 5px;
+  }
 }
 </style>

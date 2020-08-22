@@ -192,6 +192,9 @@ export default {};
   .footer-box {
     flex-direction: column;
   }
+  .contact {
+    width: 90%;
+  }
   .links {
     text-align: center;
     align-items: center;
