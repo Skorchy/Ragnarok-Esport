@@ -20,6 +20,10 @@ export default {
   overflow: hidden;
   height: 100vh;
 }
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
 @font-face {
   font-family: "azonixregular";
   src: url("assets/fonts/azonix/azonix-webfont.woff2") format("woff2"),

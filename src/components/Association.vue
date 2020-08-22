@@ -1,6 +1,7 @@
 <template>
   <div class="association-box">
-    <div class="texte-side" data-aos="fade-up" data-aos-duration="1500">
+    <div class="texte-side">
+      <img class="logo" src="../assets/logo-sans-fond.png" />
       <RgkH1 class="association-title">QUI SOMMES NOUS ?</RgkH1>
       <p
         class="association-content"
@@ -9,16 +10,10 @@
         class="association-content"
       >Créée en 2020, la structure ne cesse d'évoluer et de grandir au fil du temps. Avec l'aide de plus de 30 membres, nous mettons chacunes et chacuns nos compétences en action afin de dévolopper au mieux notre marque. Entraide et motivation sont les maitres mots au sein de notre association.</p>
     </div>
-    <div class="img-side" data-aos="fade-down" data-aos-duration="1500">
-      <img class="rightside-img" src="../assets/whoarewe-img.jpg" />
-    </div>
   </div>
 </template>
 
 <script>
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
 import RgkH1 from "@/components/RgkH1.vue";
 export default {
   components: {
@@ -29,14 +24,7 @@ export default {
 
 <style scoped>
 .association-box {
-  background-image: linear-gradient(
-    to right bottom,
-    #004144,
-    #004447,
-    #00474a,
-    #014b4e,
-    #014e51
-  );
+  background: #014e51;
   max-height: 500px;
   width: 100%;
   display: flex;
@@ -45,14 +33,15 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
   text-align: center;
-  -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.logo {
+  display: none;
 }
 .texte-side {
-  width: 70%;
-  margin-left: 50px;
-  margin-right: 50px;
+  width: 1200px;
+  margin: auto;
 }
 .association-title {
   margin-bottom: 80px;
@@ -94,12 +83,23 @@ export default {
     flex-direction: column;
     max-height: unset;
   }
+  .association-content {
+    font-size: 16px;
+  }
+  .association-title {
+    margin-bottom: 40px;
+  }
   .texte-side {
     width: 90%;
+    margin-bottom: 30px;
   }
-  .img-side {
-    width: 100%;
-    height: 400px;
+  .logo {
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 30px;
+    margin-bottom: 30px;
   }
 }
 </style>

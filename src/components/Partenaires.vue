@@ -1,7 +1,7 @@
 <template>
   <div class="partenaires-boxes">
     <RgkH1 class="partenaires-titre">NOS PARTENAIRES</RgkH1>
-    <div class="parteraires-conteneur">
+    <div class="partenaires-conteneur">
       <RGKPartnerBox
         class="partner-box"
         name="OneXWear"
@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .partenaires-boxes {
-  background-image: url("../assets/esport-stadium.jpg");
+  background: #014e51;
   background-size: cover;
   width: 100%;
   box-sizing: border-box;
@@ -44,15 +44,14 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .partenaires-titre {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-.parteraires-conteneur {
+.partenaires-conteneur {
   width: 100%;
   display: flex;
   align-items: center;
@@ -61,7 +60,7 @@ export default {
   margin-bottom: 50px;
 }
 @media (max-width: 768px) {
-  .parteraires-conteneur {
+  .partenaires-conteneur {
     flex-direction: column;
   }
   .partner-box {

@@ -1,6 +1,6 @@
 <template>
   <div class="social-networks">
-    <RgkH1 class="sn-title">Retrouvez nous sur nos réseaux sociaux</RgkH1>
+    <RgkH1 class="sn-title">Nos réseaux sociaux</RgkH1>
     <div class="sn-outter-links">
       <div class="icos">
         <img class="ico" src="../assets/icos/twitter-ico.png" />
@@ -24,17 +24,9 @@ export default {
 <style scoped>
 .social-networks {
   min-height: 200px;
-  background-image: linear-gradient(
-    to right bottom,
-    #004144,
-    #004447,
-    #00474a,
-    #014b4e,
-    #014e51
-  );
-  -webkit-box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.75);
+  background: #014e51;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .sn-title {
   padding-top: 30px;

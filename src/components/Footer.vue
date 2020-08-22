@@ -11,7 +11,7 @@
             <em class="blue">E</em>sport
           </h2>
         </div>
-        <router-link class="link" :to="{ name: 'WIP' }">Association</router-link>
+        <router-link class="link" :to="{ name: 'Ragnarok' }">Association</router-link>
         <router-link class="link" :to="{ name: 'WIP' }">Partenaires</router-link>
         <router-link class="link" :to="{ name: 'WIP' }">Recrutements</router-link>
         <router-link class="link" :to="{ name: 'WIP' }">WebTV</router-link>
@@ -58,9 +58,6 @@ export default {};
   display: flex;
   flex-direction: column;
   align-items: center;
-  -webkit-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .footer-box {
   margin: auto;

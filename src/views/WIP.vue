@@ -68,4 +68,9 @@ em {
 .twitter-link:hover {
   color: #1b94df;
 }
+@media (max-width: 768px) {
+  .work-in-progress {
+    height: 800px;
+  }
+}
 </style>

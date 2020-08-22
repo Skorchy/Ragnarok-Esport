@@ -29,7 +29,7 @@
         </p>
       </div>
     </div>
-    <div class="ragnarok-teams">
+    <div id="rgk-teams" class="ragnarok-teams">
       <RgkH1 class="ragnarok-header">Nos équipes</RgkH1>
 
       <template v-for="game in $rgk.games">
@@ -81,7 +81,7 @@ export default {
 .ragnarok-presentation {
   width: 80%;
   font-family: "metropolis_extralight";
-  color: #a3a3a3;
+  color: #c0c0c0;
   margin: auto;
 }
 .rgk-team {

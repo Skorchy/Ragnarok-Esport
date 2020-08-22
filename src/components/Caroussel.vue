@@ -11,13 +11,13 @@
       :centermode="true"
     >
       <div class="slide">
-        <img src="../assets/carousel/slide1.png" alt />
+        <img src="../assets/carousel/slide4.jpg" alt />
       </div>
       <div class="slide">
-        <img src="../assets/carousel/slide2.png" alt />
+        <img src="../assets/carousel/slide4.jpg" alt />
       </div>
       <div class="slide">
-        <img src="../assets/carousel/slide3.png" alt />
+        <img src="../assets/carousel/slide4.jpg" alt />
       </div>
       <template slot="prevButton">
         <button class="prev-button">

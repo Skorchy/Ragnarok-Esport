@@ -1,7 +1,8 @@
 <template>
   <div class="rgk-h1">
-    <span class="blue">//&nbsp;</span>
+    <span class="blue">-&nbsp;</span>
     <slot></slot>
+    <span class="blue">&nbsp;-</span>
   </div>
 </template>
 
@@ -18,5 +19,10 @@ export default {};
 }
 .blue {
   color: #32c1ad;
+}
+@media (max-width: 768px) {
+  .rgk-h1 {
+    font-size: 24px;
+  }
 }
 </style>

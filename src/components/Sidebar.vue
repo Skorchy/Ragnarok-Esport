@@ -28,7 +28,7 @@ export default {
   top: 0;
   right: 0;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   margin-top: 100px;
   padding-top: 50px;
 }
