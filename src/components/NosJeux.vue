@@ -53,8 +53,8 @@ AOS.init();
 import RgkH1 from "@/components/RgkH1.vue";
 export default {
   components: {
-    RgkH1
-  }
+    RgkH1,
+  },
 };
 </script>
 
@@ -69,8 +69,8 @@ export default {
   flex-direction: column;
   align-items: center;
   color: #ebebeb;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .nosjeux-titre {
   padding-top: 30px;

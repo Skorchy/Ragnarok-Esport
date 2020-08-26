@@ -23,8 +23,8 @@
 import RgkH1 from "@/components/RgkH1.vue";
 export default {
   components: {
-    RgkH1
-  }
+    RgkH1,
+  },
 };
 </script>
 
@@ -39,8 +39,8 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 .logo {
   display: none;

@@ -29,8 +29,8 @@ AOS.init();
 export default {
   components: {
     RGKPartnerBox,
-    RgkH1
-  }
+    RgkH1,
+  },
 };
 </script>
 
@@ -57,7 +57,7 @@ export default {
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 @media (max-width: 768px) {
   .partenaires-conteneur {

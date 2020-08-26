@@ -3,10 +3,19 @@
     <RgkH1 class="sn-title">Nos réseaux sociaux</RgkH1>
     <div class="sn-outter-links">
       <div class="icos">
-        <img class="ico" src="../assets/icos/twitter-ico.png" />
-        <img class="ico" src="../assets/icos/twitch-ico.png" />
-        <img class="ico" src="../assets/icos/yt-ico.png" />
-        <img class="ico" src="../assets/icos/ig-ico.png" />
+        <a href="https://twitter.com/esport_ragnarok" target="_blank"
+          ><img class="ico" src="../assets/icos/twitter-ico.png"
+        /></a>
+        <a
+          href="https://www.youtube.com/channel/UCoq1aJkZy7UtaKeoOx3s3iA"
+          target="_blank"
+          ><img class="ico" src="../assets/icos/yt-ico.png"
+        /></a>
+        <a
+          href="https://www.instagram.com/ragnarok.esport/?hl=fr"
+          target="_blank"
+          ><img class="ico" src="../assets/icos/ig-ico.png"
+        /></a>
       </div>
     </div>
   </div>
@@ -16,8 +25,8 @@
 import RgkH1 from "@/components/RgkH1.vue";
 export default {
   components: {
-    RgkH1
-  }
+    RgkH1,
+  },
 };
 </script>
 
@@ -31,7 +40,7 @@ export default {
 .sn-title {
   padding-top: 30px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 .sn-outter-links {
   width: 100%;
