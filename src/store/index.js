@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    isSidebarDisplayed: false,
+    isSidebarDisplayed: false
   },
   mutations: {
     toggleSidebar(state) {
@@ -13,8 +13,8 @@ export default new Vuex.Store({
     },
     closeSidebar(state) {
       state.isSidebarDisplayed = false;
-    },
+    }
   },
   actions: {},
-  modules: {},
+  modules: {}
 });

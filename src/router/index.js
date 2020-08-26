@@ -13,32 +13,32 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: Home
   },
   {
     path: "/stream",
     name: "WebTv",
-    component: WebTv,
+    component: WebTv
   },
   {
     path: "/partenaires",
     name: "Partners",
-    component: Partners,
+    component: Partners
   },
   {
     path: "/recrutements",
     name: "Recrutements",
-    component: Recrutements,
+    component: Recrutements
   },
   {
     path: "/ragnarok",
     name: "Ragnarok",
-    component: Ragnarok,
+    component: Ragnarok
   },
   {
     path: "/wip",
     name: "WIP",
-    component: WIP,
+    component: WIP
   },
 
   {
@@ -48,8 +48,8 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
+      import(/* webpackChunkName: "about" */ "../views/About.vue")
+  }
 ];
 
 const router = new VueRouter({
@@ -65,7 +65,7 @@ const router = new VueRouter({
     } else {
       return { x: 0, y: 0 };
     }
-  },
+  }
 });
 
 router.beforeEach((to, from, next) => {

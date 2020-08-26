@@ -2,27 +2,34 @@
   <div class="rgk-card">
     <div
       class="top"
-      :style="{ 'backgroundImage': `url('${require(`../assets/playerCards/playerCharacters/${player.character}`)}')`}"
+      :style="{
+        backgroundImage: `url('${require(`../assets/playerCards/playerCharacters/${player.character}`)}')`
+      }"
     >
-      <span class="player-fonction">{{player.fonction}}</span>
+      <span class="player-fonction">{{ player.fonction }}</span>
     </div>
     <div class="bottom">
       <div
         class="avatar"
-        :style="{ 'backgroundImage': `url('${require(`../assets/playerCards/playerAvatar/${player.avatar}`)}')`}"
+        :style="{
+          backgroundImage: `url('${require(`../assets/playerCards/playerAvatar/${player.avatar}`)}')`
+        }"
       ></div>
       <div class="player-infos">
         <h4 class="player-nickname">
-          {{player.prenom}} "
-          <span class="blue">{{player.pseudo}}</span>
-          " {{player.nom}}
+          {{ player.prenom }} "
+          <span class="blue">{{ player.pseudo }}</span>
+          " {{ player.nom }}
         </h4>
-        <p class="content">Âge : {{age}}</p>
+        <p class="content">Âge : {{ age }}</p>
         <p class="content player-elo" v-if="player.elo">
           MMR :
-          <img class="rank-ico" :src="`${require(`../assets/lolranks/${player.elo}.png`)}`" />
+          <img
+            class="rank-ico"
+            :src="`${require(`../assets/lolranks/${player.elo}.png`)}`"
+          />
         </p>
-        <p class="content" v-if="player.peak">MMR : {{player.peak}}</p>
+        <p class="content" v-if="player.peak">MMR : {{ player.peak }}</p>
       </div>
       <div class="player-links">
         <svg

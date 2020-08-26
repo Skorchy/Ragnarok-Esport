@@ -3,39 +3,24 @@
     <div class="footer-box">
       <div class="links">
         <div class="display-rgk-title">
-          <h2><em class="blue">R</em>agnarok</h2>
-          <img
-            class="display-rgk-title-img"
-            src="../assets/logo-sans-fond.png"
-          />
-          <h2><em class="blue">E</em>sport</h2>
+          <h2>
+            <em class="blue">R</em>agnarok
+          </h2>
+          <img class="display-rgk-title-img" src="../assets/logo-sans-fond.png" />
+          <h2>
+            <em class="blue">E</em>sport
+          </h2>
         </div>
-        <router-link class="link" :to="{ name: 'Ragnarok' }"
-          >Association</router-link
-        >
-        <router-link class="link" :to="{ name: 'WIP' }"
-          >Partenaires</router-link
-        >
-        <router-link class="link" :to="{ name: 'WIP' }"
-          >Recrutements</router-link
-        >
+        <router-link class="link" :to="{ name: 'Ragnarok' }">Association</router-link>
+        <router-link class="link" :to="{ name: 'WIP' }">Partenaires</router-link>
+        <router-link class="link" :to="{ name: 'WIP' }">Recrutements</router-link>
         <router-link class="link" :to="{ name: 'WIP' }">WebTV</router-link>
       </div>
       <div class="contact" v-if="!messageSent">
         <label class="contact-label" for="contact-name">Nom</label>
-        <input
-          class="contact-input"
-          type="text"
-          name="contact-name"
-          v-model="name"
-        />
+        <input class="contact-input" type="text" name="contact-name" v-model="name" />
         <label class="contact-label" for="contact-email">Email</label>
-        <input
-          class="contact-input"
-          type="email"
-          name="contact-email"
-          v-model="email"
-        />
+        <input class="contact-input" type="email" name="contact-email" v-model="email" />
         <label class="contact-label" for="contact-message">Message</label>
         <textarea
           v-model="content"
@@ -50,9 +35,7 @@
           @click="sendInfosFromContact()"
           class="contact-button"
           type="button"
-        >
-          Envoyer
-        </button>
+        >Envoyer</button>
       </div>
       <div class="message-success" v-if="messageSent">
         <span class="message">Message envoyé avec succès !</span>
@@ -83,7 +66,7 @@ export default {
       name: "",
       email: "",
       content: "",
-      messageSent: false,
+      messageSent: false
     };
   },
   methods: {
@@ -100,34 +83,34 @@ export default {
             fields: [
               {
                 name: "Nom :",
-                value: this.name,
+                value: this.name
               },
               {
                 name: "Email :",
-                value: this.email,
+                value: this.email
               },
 
               {
                 name: "Message : ",
-                value: this.content,
-              },
+                value: this.content
+              }
             ],
             image: {
               url:
-                "https://cdn.discordapp.com/attachments/177784067809476608/748116922444414986/newmessage.jpg",
+                "https://cdn.discordapp.com/attachments/177784067809476608/748116922444414986/newmessage.jpg"
             },
             thumbnail: {
               url:
-                "https://cdn.discordapp.com/attachments/177784067809476608/748113862540132422/logo-sans-fond.png",
-            },
-          },
-        ],
+                "https://cdn.discordapp.com/attachments/177784067809476608/748113862540132422/logo-sans-fond.png"
+            }
+          }
+        ]
       };
 
       await axios.post(webhookUrl, payload);
       this.messageSent = true;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -269,11 +252,62 @@ export default {
 }
 .message-success {
   border: 2px dashed #cacaca;
+  padding: 25px;
+  animation: fadeIn ease 1.5s;
+  -webkit-animation: fadeIn ease 1.5s;
+  -moz-animation: fadeIn ease 1.5s;
+  -o-animation: fadeIn ease 1.5s;
+  -ms-animation: fadeIn ease 1.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .message {
   font-family: "disket_monobold";
   font-size: 18px;
 }
+
 @media (max-width: 1024px) {
 }
 @media (max-width: 768px) {

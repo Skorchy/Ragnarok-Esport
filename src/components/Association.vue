@@ -3,12 +3,18 @@
     <div class="texte-side">
       <img class="logo" src="../assets/logo-sans-fond.png" />
       <RgkH1 class="association-title">QUI SOMMES NOUS ?</RgkH1>
-      <p
-        class="association-content"
-      >Ragnarök Esport est une jeune structure regroupant un groupe de joueurs francophones réunis autour d'un même but : conquérir le monde de l'esport.</p>
-      <p
-        class="association-content"
-      >Créée en 2020, la structure ne cesse d'évoluer et de grandir au fil du temps. Avec l'aide de plus de 30 membres, nous mettons chacunes et chacuns nos compétences en action afin de dévolopper au mieux notre marque. Entraide et motivation sont les maitres mots au sein de notre association.</p>
+      <p class="association-content">
+        Ragnarök Esport est une jeune structure regroupant un groupe de joueurs
+        francophones réunis autour d'un même but : conquérir le monde de
+        l'esport.
+      </p>
+      <p class="association-content">
+        Créée en 2020, la structure ne cesse d'évoluer et de grandir au fil du
+        temps. Avec l'aide de plus de 30 membres, nous mettons chacunes et
+        chacuns nos compétences en action afin de dévolopper au mieux notre
+        marque. Entraide et motivation sont les maitres mots au sein de notre
+        association.
+      </p>
     </div>
   </div>
 </template>

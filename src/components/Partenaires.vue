@@ -49,7 +49,7 @@ export default {
 }
 .partenaires-titre {
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 180px;
 }
 .partenaires-conteneur {
   width: 100%;

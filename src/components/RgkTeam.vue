@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="ragnarok-team">
-      <RgkPlayerCard v-for="player in team.players" :key="player.name" :player="player" />
+      <RgkPlayerCard
+        v-for="player in team.players"
+        :key="player.name"
+        :player="player"
+      />
     </div>
   </div>
 </template>

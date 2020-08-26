@@ -4,7 +4,7 @@
 
     <svg
       class="partner-icos"
-      v-if="imgName=='fragcase'"
+      v-if="imgName == 'fragcase'"
       xmlns="http://www.w3.org/2000/svg"
       width="48"
       height="48"
@@ -16,10 +16,17 @@
     </svg>
 
     <!-- SVG ONEXWEAR -->
-    <img class="partner-icos" v-if="imgName=='onexwear'" src="../assets/jersey-ico.png" />
+    <img
+      class="partner-icos"
+      v-if="imgName == 'onexwear'"
+      src="../assets/jersey-ico.png"
+    />
 
     <a :href="partnerLink" target="_blank">
-      <img class="partner-logo grey" :src="require(`../assets/partenaires/${imgName}.png`)" />
+      <img
+        class="partner-logo grey"
+        :src="require(`../assets/partenaires/${imgName}.png`)"
+      />
     </a>
     <p class="partner-content">
       <slot></slot>

@@ -36,8 +36,9 @@
       <div class="unskewed-text">
         <router-link
           class="button-router"
-          :to="{ name: 'Ragnarok' , hash: '#rgk-teams'}"
-        >Nos Équipes</router-link>
+          :to="{ name: 'Ragnarok', hash: '#rgk-teams' }"
+          >Nos Équipes</router-link
+        >
       </div>
     </button>
   </div>

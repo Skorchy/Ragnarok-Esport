@@ -2,7 +2,7 @@
   <div class="header-box">
     <div class="left-side-header">
       <span class="menu-buttons">
-        <router-link class="routerlink" :to="{ name : 'Ragnarok' }">
+        <router-link class="routerlink" :to="{ name: 'Ragnarok' }">
           <em class="first-letter">R</em>agnaröK
           <em class="first-letter">E</em>sport
         </router-link>
