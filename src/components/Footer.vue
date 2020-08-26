@@ -3,33 +3,59 @@
     <div class="footer-box">
       <div class="links">
         <div class="display-rgk-title">
-          <h2>
-            <em class="blue">R</em>agnarok
-          </h2>
-          <img class="display-rgk-title-img" src="../assets/logo-sans-fond.png" />
-          <h2>
-            <em class="blue">E</em>sport
-          </h2>
+          <h2><em class="blue">R</em>agnarok</h2>
+          <img
+            class="display-rgk-title-img"
+            src="../assets/logo-sans-fond.png"
+          />
+          <h2><em class="blue">E</em>sport</h2>
         </div>
-        <router-link class="link" :to="{ name: 'Ragnarok' }">Association</router-link>
-        <router-link class="link" :to="{ name: 'WIP' }">Partenaires</router-link>
-        <router-link class="link" :to="{ name: 'WIP' }">Recrutements</router-link>
+        <router-link class="link" :to="{ name: 'Ragnarok' }"
+          >Association</router-link
+        >
+        <router-link class="link" :to="{ name: 'WIP' }"
+          >Partenaires</router-link
+        >
+        <router-link class="link" :to="{ name: 'WIP' }"
+          >Recrutements</router-link
+        >
         <router-link class="link" :to="{ name: 'WIP' }">WebTV</router-link>
       </div>
-      <div class="contact">
+      <div class="contact" v-if="!messageSent">
         <label class="contact-label" for="contact-name">Nom</label>
-        <input class="contact-input" type="text" name="contact-name" />
+        <input
+          class="contact-input"
+          type="text"
+          name="contact-name"
+          v-model="name"
+        />
         <label class="contact-label" for="contact-email">Email</label>
-        <input class="contact-input" type="email" name="contact-email" />
+        <input
+          class="contact-input"
+          type="email"
+          name="contact-email"
+          v-model="email"
+        />
         <label class="contact-label" for="contact-message">Message</label>
         <textarea
+          v-model="content"
           class="contact-input area"
           rows="10"
           maxlength="600"
           name="contact-message"
           placeholder="Un renseignement ? Un partenariat ? Prenez contact !"
         />
-        <button class="contact-button" type="button">Envoyer</button>
+        <button
+          :disabled="!(name && email && content)"
+          @click="sendInfosFromContact()"
+          class="contact-button"
+          type="button"
+        >
+          Envoyer
+        </button>
+      </div>
+      <div class="message-success" v-if="messageSent">
+        <span class="message">Message envoyé avec succès !</span>
       </div>
     </div>
     <hr class="separator" />
@@ -46,7 +72,63 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+
+const webhookUrl =
+  "https://discordapp.com/api/webhooks/747153286376849539/cXa5k43Z_bzIjydt5rE2epFgGOKJK1VIhfV1A0Bkz2CN9-2uDf6TsKe2alkUwsd67Yrr";
+
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      content: "",
+      messageSent: false,
+    };
+  },
+  methods: {
+    async sendInfosFromContact() {
+      const payload = {
+        username: "New Challenger !",
+        content:
+          "----------------------------------------------------------------",
+        embeds: [
+          {
+            title:
+              "Un nouveau message provenant du site web vient d'être reçu.",
+            color: 7527030,
+            fields: [
+              {
+                name: "Nom :",
+                value: this.name,
+              },
+              {
+                name: "Email :",
+                value: this.email,
+              },
+
+              {
+                name: "Message : ",
+                value: this.content,
+              },
+            ],
+            image: {
+              url:
+                "https://cdn.discordapp.com/attachments/177784067809476608/748116922444414986/newmessage.jpg",
+            },
+            thumbnail: {
+              url:
+                "https://cdn.discordapp.com/attachments/177784067809476608/748113862540132422/logo-sans-fond.png",
+            },
+          },
+        ],
+      };
+
+      await axios.post(webhookUrl, payload);
+      this.messageSent = true;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -164,6 +246,9 @@ export default {};
   -moz-box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
 }
+.contact-button:disabled {
+  background: grey;
+}
 
 .blue {
   font-style: normal;
@@ -182,7 +267,13 @@ export default {};
   display: flex;
   justify-content: space-between;
 }
-
+.message-success {
+  border: 2px dashed #cacaca;
+}
+.message {
+  font-family: "disket_monobold";
+  font-size: 18px;
+}
 @media (max-width: 1024px) {
 }
 @media (max-width: 768px) {
