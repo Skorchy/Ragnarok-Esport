@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 .front-display {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh);
   background-image: url("../assets/carousel/front-image.jpg");
   background-size: cover;
   -webkit-box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.75);

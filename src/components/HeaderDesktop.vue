@@ -39,6 +39,8 @@ export default {};
 
 <style lang="scss" scoped>
 .header-box {
+  position: fixed;
+  z-index: 20;
   background-color: #101010;
   height: 150px;
   width: 100%;
