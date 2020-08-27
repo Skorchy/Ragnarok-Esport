@@ -15,14 +15,16 @@ export default {
               dateOfBirth: {
                 year: 1995,
                 month: 8,
-                day: 3
+                day: 3,
               },
               character: "lol/renekton.jpg",
               elo: "platinium",
               fonction: "Toplane",
               avatar: "lol/misae.png",
-              twitterLink: "https://twitter.com/__Misae__",
-              ytbLink: "https://www.youtube.com/user/HunttWithStyle"
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "HUNTT",
@@ -31,13 +33,16 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 4,
-                day: 16
+                day: 16,
               },
               character: "lol/zac.jpg",
               elo: "diamond",
               fonction: "Jungle",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "https://twitter.com/HunttAMV",
+              ytbLink: "https://www.youtube.com/user/HunttWithStyle",
+              twitchLink: "https://www.twitch.tv/hunttamv",
+              igLink: "",
             },
             {
               pseudo: "XAIRO",
@@ -46,13 +51,16 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "lol/yasuo.jpg",
               elo: "platinium",
               fonction: "Midlane",
               avatar: "lol/xairo.jpg",
-              twitterLink: ""
+              twitterLink: "https://twitter.com/MrKyo1",
+              ytbLink: "",
+              twitchLink: "https://www.twitch.tv/xairotv",
+              igLink: "",
             },
             {
               pseudo: "MISAE",
@@ -61,13 +69,16 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 2
+                day: 2,
               },
               character: "lol/ezreal.jpg",
               elo: "diamond",
               fonction: "AdCarry",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "DAGREN",
@@ -76,17 +87,20 @@ export default {
               dateOfBirth: {
                 year: 1998,
                 month: 9,
-                day: 6
+                day: 6,
               },
               character: "lol/thresh.jpg",
               elo: "platinium",
               fonction: "Support",
               avatar: "lol/misae.png",
-              twitterLink: ""
-            }
-          ]
-        }
-      ]
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
+            },
+          ],
+        },
+      ],
     },
 
     // ROCKET LEAGUE ROSTER //
@@ -104,13 +118,16 @@ export default {
               dateOfBirth: {
                 year: 1998,
                 month: 5,
-                day: 7
+                day: 7,
               },
               character: "rl/octane-mablo.jpg",
               peak: 1650,
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "Infinity_RL",
@@ -119,13 +136,16 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "rl/octane-infinity.jpg",
               peak: 1565,
               fonction: "Joueur (c)",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "Saumon",
@@ -134,17 +154,20 @@ export default {
               dateOfBirth: {
                 year: 2003,
                 month: 6,
-                day: 19
+                day: 19,
               },
               character: "rl/octane-saumon.jpg",
               peak: 1565,
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
-            }
-          ]
-        }
-      ]
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
+            },
+          ],
+        },
+      ],
     },
 
     // VALORANT ROSTER //
@@ -162,12 +185,15 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "lol/renekton.jpg",
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "Infinity_RL",
@@ -176,12 +202,15 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "lol/renekton.jpg",
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "Saumon",
@@ -190,16 +219,19 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "lol/renekton.jpg",
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
-            }
-          ]
-        }
-      ]
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
+            },
+          ],
+        },
+      ],
     },
 
     // FORTNITE ROSTER //
@@ -217,12 +249,15 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "ftn/dynamo.jpg",
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "MC Guigui",
@@ -231,12 +266,15 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "ftn/dynamo.jpg",
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
             },
             {
               pseudo: "James",
@@ -245,16 +283,19 @@ export default {
               dateOfBirth: {
                 year: 1996,
                 month: 9,
-                day: 20
+                day: 20,
               },
               character: "ftn/dynamo.jpg",
               fonction: "Joueur",
               avatar: "lol/misae.png",
-              twitterLink: ""
-            }
-          ]
-        }
-      ]
-    }
-  ]
+              twitterLink: "",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };

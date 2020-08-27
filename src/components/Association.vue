@@ -1,8 +1,8 @@
 <template>
-  <div class="association-box">
+  <div class="association-box" id="decouvrir">
     <div class="texte-side">
-      <img class="logo" src="../assets/logo-sans-fond.png" />
       <RgkH1 class="association-title">QUI SOMMES NOUS ?</RgkH1>
+      <RgkHr />
       <p class="association-content">
         Ragnarök Esport est une jeune structure regroupant un groupe de joueurs
         francophones réunis autour d'un même but : conquérir le monde de
@@ -15,23 +15,26 @@
         marque. Entraide et motivation sont les maitres mots au sein de notre
         association.
       </p>
+      <img class="logo" src="../assets/logo-sans-fond.png" />
     </div>
   </div>
 </template>
 
 <script>
 import RgkH1 from "@/components/RgkH1.vue";
+import RgkHr from "@/components/RgkHr.vue";
 export default {
   components: {
     RgkH1,
-  },
+    RgkHr
+  }
 };
 </script>
 
 <style scoped>
 .association-box {
   background: #014e51;
-  max-height: 500px;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -39,11 +42,7 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
   text-align: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
-.logo {
-  display: none;
+  padding: 150px 0;
 }
 .texte-side {
   width: 1200px;
@@ -58,9 +57,10 @@ export default {
   font-weight: 600;
   color: #d6d5d5;
 }
-.rightside-img {
-  margin: 0;
-  width: 700px;
+.logo {
+  width: 300px;
+  height: 300px;
+  padding-top: 50px;
 }
 @media (max-width: 1024px) {
   .association-box {
@@ -69,11 +69,12 @@ export default {
   .texte-side {
     width: 50%;
   }
-  .img-side {
-    width: 40%;
-  }
 }
 @media (max-width: 768px) {
+  .logo {
+    width: 200px;
+    height: 200px;
+  }
   .association-box {
     max-height: 700px;
   }
@@ -88,6 +89,7 @@ export default {
   .association-box {
     flex-direction: column;
     max-height: unset;
+    padding: 50px 0;
   }
   .association-content {
     font-size: 16px;
@@ -97,14 +99,6 @@ export default {
   }
   .texte-side {
     width: 90%;
-    margin-bottom: 30px;
-  }
-  .logo {
-    display: block;
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    padding-top: 30px;
     margin-bottom: 30px;
   }
 }

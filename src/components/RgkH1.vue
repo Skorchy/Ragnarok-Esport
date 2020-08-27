@@ -12,7 +12,7 @@ export default {};
 
 <style scoped>
 .rgk-h1 {
-  font-size: 40px;
+  font-size: 48px;
   font-family: "azonixregular";
   color: #ebebeb;
   text-shadow: 3px 3px 0px rgba(15, 15, 15, 0.9);

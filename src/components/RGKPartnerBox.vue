@@ -16,17 +16,10 @@
     </svg>
 
     <!-- SVG ONEXWEAR -->
-    <img
-      class="partner-icos"
-      v-if="imgName == 'onexwear'"
-      src="../assets/jersey-ico.png"
-    />
+    <img class="partner-icos" v-if="imgName == 'onexwear'" src="../assets/jersey-ico.png" />
 
     <a :href="partnerLink" target="_blank">
-      <img
-        class="partner-logo grey"
-        :src="require(`../assets/partenaires/${imgName}.png`)"
-      />
+      <img class="partner-logo grey" :src="require(`../assets/partenaires/${imgName}.png`)" />
     </a>
     <p class="partner-content">
       <slot></slot>
@@ -65,7 +58,8 @@ export default {
   height: 400px;
   background: #fafafa;
   border-radius: 5px;
-  border-left: 12px solid #32c1ad;
+  border-left: 15px solid #101010;
+  border-right: 15px solid #101010;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.5), 0 5px 8px 0 rgba(0, 0, 0, 0.5),
     0 1px 14px 0 rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -103,7 +97,7 @@ export default {
 }
 @media (max-width: 768px) {
   .box {
-    width: 360px;
+    width: 270px;
   }
 }
 </style>

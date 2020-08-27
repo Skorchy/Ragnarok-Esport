@@ -154,6 +154,10 @@ export default {
   color: #ebebeb;
   display: flex;
   align-items: center;
+  @media (max-width: 415px) {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
 }
 .display-rgk-title-img {
   width: 50px;
@@ -188,8 +192,15 @@ export default {
   max-width: 100%;
   max-height: 135px;
   font-family: "metropolis_extralight";
-  color: #7c7c7c;
+  color: #32c1ad;
   outline: 0;
+}
+.area::placeholder {
+  font-size: 16px;
+  color: #7c7c7c;
+  @media (max-width: 415px) {
+    font-size: 12px;
+  }
 }
 
 .contact-button {
@@ -249,6 +260,11 @@ export default {
   color: #606060;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 415px) {
+    width: 90%;
+    font-size: 10px;
+  }
 }
 .message-success {
   border: 2px dashed #cacaca;
@@ -315,7 +331,7 @@ export default {
     flex-direction: column;
   }
   .contact {
-    width: 90%;
+    width: 98%;
   }
   .links {
     text-align: center;

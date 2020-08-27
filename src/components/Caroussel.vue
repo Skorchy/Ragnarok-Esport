@@ -1,132 +1,115 @@
 <template>
-  <div class="caroussel-box">
-    <div class="mobile-img">
-      <img src="../assets/carousel/slide1.png" />
+  <div class="front-display">
+    <div class="content">
+      <RgkH1 class="title">Bienvenue chez Ragnarök Esport</RgkH1>
+      <div class="buttons">
+        <a href="#decouvrir">
+          <button class="button">Nous découvrir</button>
+        </a>
+        <button class="button button-boutique" :disabled="disabled">Notre boutique</button>
+      </div>
     </div>
-    <agile
-      class="caroussel-box"
-      :dots="false"
-      :autoplay="true"
-      :autoplay-speed="5000"
-      :centermode="true"
-    >
-      <div class="slide">
-        <img src="../assets/carousel/slide4.jpg" alt />
-      </div>
-      <div class="slide">
-        <img src="../assets/carousel/slide4.jpg" alt />
-      </div>
-      <div class="slide">
-        <img src="../assets/carousel/slide4.jpg" alt />
-      </div>
-      <template slot="prevButton">
-        <button class="prev-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="#EBEBEB"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
-            />
-          </svg>
-        </button>
-      </template>
-      <template slot="nextButton">
-        <button class="next-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="#EBEBEB"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-          </svg>
-        </button>
-      </template>
-    </agile>
   </div>
 </template>
 
 <script>
-import { VueAgile } from "vue-agile";
-
+import RgkH1 from "@/components/RgkH1.vue";
 export default {
+  data() {
+    return {
+      disabled: true
+    };
+  },
   components: {
-    agile: VueAgile
+    RgkH1
   }
 };
 </script>
 
-<style scoped>
-.mobile-img {
-  display: none;
+<style lang="scss" scoped>
+.front-display {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url("../assets/carousel/front-image.jpg");
+  background-size: cover;
+  -webkit-box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
 }
-.caroussel-box {
-  background: rgb(250, 250, 250);
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  @media (max-width: 415px) {
+    padding-top: 100px;
+  }
+}
+.title {
+  @media (max-width: 415px) {
+    text-align: center;
+  }
+}
+.buttons {
+  display: flex;
+  min-width: 30%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 300px;
+  @media (max-width: 415px) {
+    margin-top: 180px;
+  }
+}
+.button {
+  margin-right: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: "azonixregular";
+  color: rgb(10, 10, 10);
+  font-size: 20px;
+  padding: 15px;
+  border: 0;
   background: -moz-linear-gradient(
-    90deg,
-    rgba(250, 250, 250, 1) 20%,
-    rgba(50, 193, 173, 1) 80%
+    59deg,
+    rgb(0, 142, 138) 30%,
+    rgb(0, 255, 203) 70%
   );
   background: -webkit-linear-gradient(
-    90deg,
-    rgba(250, 250, 250, 1) 20%,
-    rgba(50, 193, 173, 1) 80%
+    59deg,
+    rgb(0, 142, 138) 30%,
+    rgb(0, 255, 203) 70%
+  );
+  background: -o-linear-gradient(
+    59deg,
+    rgb(0, 142, 138) 30%,
+    rgb(0, 255, 203) 70%
+  );
+  background: -ms-linear-gradient(
+    59deg,
+    rgb(0, 142, 138) 30%,
+    rgb(0, 255, 203) 70%
   );
   background: linear-gradient(
-    90deg,
-    rgba(250, 250, 250, 1) 20%,
-    rgba(50, 193, 173, 1) 80%
+    329deg,
+    rgb(0, 142, 138) 30%,
+    rgb(0, 255, 203) 70%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa",endColorstr="#32c1ad",GradientType=1);
-  height: 700px;
-  width: 100%;
-  overflow: hidden;
-}
-.slide {
-  display: flex;
-  height: 700px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-.prev-button,
-.next-button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 50px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 80px;
-  transition-duration: 0.3s;
-}
-.prev-button:hover,
-.next-button:hover {
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-}
-.prev-button {
-  left: 0;
-}
-.next-button {
-  right: 0;
-}
-
-@media (max-width: 768px) {
-  .caroussel-box {
-    display: none;
+  -webkit-box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.75);
+  @media (max-width: 415px) {
+    margin: auto;
   }
-  .mobile-img {
-    display: block;
-    width: 100%;
+}
+.button:active {
+  transform: scale(0.98);
+}
+.button:disabled {
+  background: grey;
+}
+.button-boutique {
+  @media (max-width: 415px) {
+    display: none;
   }
 }
 </style>

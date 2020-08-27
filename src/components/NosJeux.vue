@@ -1,67 +1,38 @@
 <template>
   <div class="nosjeux-box">
     <RgkH1 class="nosjeux-titre">NOUS SOMMES PRÉSENTS SUR...</RgkH1>
-    <hr class="nosjeux-hr" />
+    <RgkHr />
     <div class="blasons">
-      <img
-        class="blason"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        id="blason-Valorant"
-        src="../assets/blasons/blason_LoL_blue.png"
-      />
-      <img
-        class="blason"
-        data-aos="fade-down"
-        data-aos-duration="1500"
-        id="blason-LoL"
-        src="../assets/blasons/blason_RL_blue.png"
-      />
-      <img
-        class="blason"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        id="blason-RL"
-        src="../assets/blasons/blason_FN_blue.png"
-      />
-      <img
-        class="blason"
-        data-aos="fade-down"
-        data-aos-duration="1500"
-        id="blason-FN"
-        src="../assets/blasons/blason_valorant_blue.png"
-      />
+      <img class="blason" id="blason-Valorant" src="../assets/blasons/blason_LoL_blue.png" />
+      <img class="blason" id="blason-LoL" src="../assets/blasons/blason_RL_blue.png" />
+      <img class="blason" id="blason-RL" src="../assets/blasons/blason_FN_blue.png" />
+      <img class="blason" id="blason-FN" src="../assets/blasons/blason_valorant_blue.png" />
     </div>
     <button class="nosjeux-button" type="button">
       <div class="unskewed-text">
         <router-link
           class="button-router"
           :to="{ name: 'Ragnarok', hash: '#rgk-teams' }"
-          >Nos Équipes</router-link
-        >
+        >Nos Équipes</router-link>
       </div>
     </button>
   </div>
 </template>
 
 <script>
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init();
-
 import RgkH1 from "@/components/RgkH1.vue";
+import RgkHr from "@/components/RgkHr.vue";
 export default {
   components: {
     RgkH1,
-  },
+    RgkHr
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .nosjeux-box {
   background-color: rgb(10, 10, 10);
-
   min-height: 400px;
   width: 100%;
   box-sizing: border-box;
@@ -69,8 +40,10 @@ export default {
   flex-direction: column;
   align-items: center;
   color: #ebebeb;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
+  @media (max-width: 415px) {
+    padding: 50px 0px;
+  }
 }
 .nosjeux-titre {
   padding-top: 30px;
@@ -97,11 +70,6 @@ export default {
   font-size: 20px;
   padding: 15px;
   border: 0;
-  -moz-transform: skew(-30deg, 0deg);
-  -webkit-transform: skew(-30deg, 0deg);
-  -o-transform: skew(-30deg, 0deg);
-  -ms-transform: skew(-30deg, 0deg);
-  transform: skew(-30deg, 0deg);
   background: rgb(0, 142, 138);
   background: -moz-linear-gradient(
     59deg,
@@ -136,13 +104,7 @@ export default {
   text-decoration: none;
   color: rgb(10, 10, 10);
 }
-.unskewed-text {
-  -moz-transform: skew(30deg, 0deg);
-  -webkit-transform: skew(30deg, 0deg);
-  -o-transform: skew(30deg, 0deg);
-  -ms-transform: skew(30deg, 0deg);
-  transform: skew(30deg, 0deg);
-}
+
 .nosjeux-button:focus {
   outline: 0;
 }
