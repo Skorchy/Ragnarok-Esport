@@ -25,7 +25,7 @@
         </router-link>
       </span>
       <span class="menu-buttons">
-        <router-link class="routerlink" :to="{ name: 'WIP' }">
+        <router-link class="routerlink" :to="{ name: 'WebTv' }">
           <em class="first-letter">W</em>ebTV
         </router-link>
       </span>

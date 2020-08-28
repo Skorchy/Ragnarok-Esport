@@ -166,6 +166,7 @@ export default {
 .player-infos {
   padding-top: 50px;
   margin-bottom: 10px;
+  font-family: "metropolis_extralight";
 }
 .player-nickname {
   text-align: center;
