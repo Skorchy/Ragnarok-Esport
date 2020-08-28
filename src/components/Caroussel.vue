@@ -40,7 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 350px;
   @media (max-width: 415px) {
     padding-top: 100px;
   }

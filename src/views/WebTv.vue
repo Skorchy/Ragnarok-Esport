@@ -3,7 +3,7 @@
     <div class="tv">
       <div id="twitch-embed"></div>
       <div class="buttons">
-        <a href="https://www.paypal.com/paypalme/RagnarokEsport" target="_blank">
+        <a class="links" href="https://www.paypal.com/paypalme/RagnarokEsport" target="_blank">
           <button class="button donate">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path
@@ -41,12 +41,13 @@ export default {
   mounted() {
     this.$loadScript("https://embed.twitch.tv/embed/v1.js").then(() => {
       /*  global Twitch */
-      new Twitch.Embed("twitch-embed", {
+      var options = {
         width: "100%",
-        height: 700,
-        channel: "monstercat",
-        theme: "light"
-      });
+        height: "810px",
+        channel: "monstercat"
+      };
+      var player = new Twitch.Player("twitch-embed", options);
+      player.setVolume(0.5);
     });
   }
 };
@@ -54,17 +55,21 @@ export default {
 
 <style lang="scss" scoped>
 .web-tv {
-  padding-top: 150px;
+  padding-top: 160px;
   background: #151515;
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 415px) {
+    padding-top: 20px;
+  }
 }
 .tv {
   width: 80%;
-  height: 700px;
-  margin: 100px 0;
-  background: chocolate;
+  min-height: 400px;
+  @media (max-width: 415px) {
+    width: 95%;
+  }
 }
 .planning {
   width: 80%;
@@ -79,24 +84,72 @@ export default {
 
 .planning-img {
   height: 450px;
-  background: brown;
+  background-image: url("../assets/comingsoon.jpg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
   margin-bottom: 50px;
 }
 .buttons {
   margin: auto;
-  padding-top: 50px;
-  width: 50%;
+  padding: 50px 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  @media (max-width: 415px) {
+    flex-direction: column;
+  }
+}
+.links {
+  text-decoration: none;
 }
 .button {
-  height: 50px;
-  width: 250px;
+  cursor: pointer;
+  height: 70px;
+  width: 300px;
   display: flex;
   align-items: center;
+  border: 0;
+  border-radius: 5px;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: "azonixregular";
+  color: #fafafa;
+  fill: #fafafa;
+  -webkit-box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.button:hover {
+  opacity: 1;
+}
+.button:focus {
+  outline: 0;
+}
+.button:active {
+  transform: scale(0.99);
+}
+.button svg {
+  margin-left: 20px;
 }
 .button span {
-  margin-left: 20px;
+  margin-left: 80px;
+}
+.donate {
+  background: #32c1ad;
+
+  span {
+    margin-left: 90px;
+  }
+  @media (max-width: 415px) {
+    margin-bottom: 10px;
+  }
+}
+.go-twitch {
+  background: #6441a5;
+
+  span {
+    margin-left: 50px;
+  }
 }
 </style>
