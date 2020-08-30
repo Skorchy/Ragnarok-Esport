@@ -1,7 +1,15 @@
 <template>
   <div class="web-tv">
     <div class="tv">
-      <div id="twitch-embed"></div>
+      <iframe
+        class="twitch-player"
+        src="https://player.twitch.tv/?channel=monstercat&parent=localhost"
+        height="100%"
+        width="100%"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+      ></iframe>
       <div class="buttons">
         <a class="links" href="https://www.paypal.com/paypalme/RagnarokEsport" target="_blank">
           <button class="button donate">
@@ -26,7 +34,7 @@
       </div>
     </div>
     <div class="planning">
-      <RgkH1 class="planning-titre">Planning</RgkH1>
+      <RgkH1 class="planning-titre">Programmation</RgkH1>
       <div class="planning-img"></div>
     </div>
   </div>
@@ -37,18 +45,6 @@ import RgkH1 from "@/components/RgkH1.vue";
 export default {
   components: {
     RgkH1
-  },
-  mounted() {
-    this.$loadScript("https://embed.twitch.tv/embed/v1.js").then(() => {
-      /*  global Twitch */
-      var options = {
-        width: "100%",
-        height: "810px",
-        channel: "monstercat"
-      };
-      var player = new Twitch.Player("twitch-embed", options);
-      player.setVolume(0.5);
-    });
   }
 };
 </script>
@@ -60,8 +56,21 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  @media (max-width: 415px) {
+  @media (max-width: 1024px) {
     padding-top: 20px;
+  }
+}
+.twitch-player {
+  width: 100%;
+  height: 810px;
+  @media (max-width: 415px) {
+    height: 200px;
+  }
+  @media (max-width: 568px) {
+    height: 250px;
+  }
+  @media (max-width: 812px) {
+    height: 350px;
   }
 }
 .tv {
@@ -92,7 +101,8 @@ export default {
 }
 .buttons {
   margin: auto;
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 150px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -119,6 +129,9 @@ export default {
   -webkit-box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.75);
+  @media (max-width: 415px) {
+    width: 100%;
+  }
 }
 .button:hover {
   opacity: 1;
@@ -132,9 +145,7 @@ export default {
 .button svg {
   margin-left: 20px;
 }
-.button span {
-  margin-left: 80px;
-}
+
 .donate {
   background: #32c1ad;
 
@@ -147,9 +158,8 @@ export default {
 }
 .go-twitch {
   background: #6441a5;
-
   span {
-    margin-left: 50px;
+    margin-left: 45px;
   }
 }
 </style>

@@ -50,6 +50,9 @@ export default {};
   box-sizing: border-box;
   flex-grow: 1;
   overflow: hidden;
+  @media (max-width: 812px) {
+    position: relative;
+  }
 }
 .left-side-header {
   display: flex;

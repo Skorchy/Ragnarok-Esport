@@ -3,15 +3,7 @@
     <div class="ragnarok-preview">
       <RgkH1 class="ragnarok-header">RGK ESPORT !</RgkH1>
       <div class="ragnarok-presentation">
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
-        </p>
+        <p>Ragnarök Esport est une association regroupant des gamers francophones qui ont pour vocation de s'implanter et se faire un nom sur la scène esport européenne.</p>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -45,10 +37,7 @@
           }"
         ></div>
         <!-- SEPARATEUR MOBILE -->
-        <div
-          :key="'separator-mobile-' + game.game"
-          class="separator-mobile"
-        ></div>
+        <div :key="'separator-mobile-' + game.game" class="separator-mobile"></div>
         <!-- TEAM DISPLAY -->
         <div v-for="team in game.teams" :key="team.name">
           <RgkTeam class="rgk-team" :team="team" />

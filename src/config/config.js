@@ -302,4 +302,48 @@ export default {
       ],
     },
   ],
+  staff: [
+    {
+      poste: "Président / Brand Manager",
+      infos: {
+        pseudo: "Skorch",
+        nom: "Rose",
+        prenom: "Mickaël",
+        dateOfBirth: {
+          year: 1993,
+          month: 10,
+          day: 26,
+        },
+        photo: "",
+      },
+    },
+    {
+      poste: "Vice-Présidente / Community Manageuse",
+      infos: {
+        pseudo: "Kaloptia",
+        nom: "Wattellier",
+        prenom: "Karla",
+        dateOfBirth: {
+          year: 1998,
+          month: 9,
+          day: 5,
+        },
+        photo: "",
+      },
+    },
+    {
+      poste: "Trésorière / Secrétaire Générale",
+      infos: {
+        pseudo: "Skadi",
+        nom: "Rose",
+        prenom: "Elodie",
+        dateOfBirth: {
+          year: 1996,
+          month: 5,
+          day: 15,
+        },
+        photo: "",
+      },
+    },
+  ],
 };

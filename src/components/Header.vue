@@ -22,7 +22,7 @@ export default {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mobile {
     display: flex;
   }
