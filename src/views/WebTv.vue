@@ -3,7 +3,7 @@
     <div class="tv">
       <iframe
         class="twitch-player"
-        src="https://player.twitch.tv/?channel=monstercat&parent=https://rgk-uat.netlify.app"
+        src="https://player.twitch.tv/?channel=skorchyrgk&parent=rgk-uat.netlify.app"
         height="100%"
         width="100%"
         frameborder="0"
@@ -71,6 +71,9 @@ export default {
   }
   @media (max-width: 812px) {
     height: 350px;
+  }
+  @media (max-width: 1024px) {
+    height: 460px;
   }
 }
 .tv {

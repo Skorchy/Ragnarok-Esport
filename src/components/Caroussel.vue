@@ -42,7 +42,7 @@ export default {
   align-items: center;
   padding-top: 350px;
   @media (max-width: 415px) {
-    padding-top: 100px;
+    padding-top: 200px;
   }
 }
 .title {

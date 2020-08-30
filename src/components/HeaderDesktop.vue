@@ -42,7 +42,7 @@ export default {};
   position: fixed;
   z-index: 20;
   background-color: #101010;
-  height: 150px;
+  height: 100px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@ export default {};
 }
 
 .logo {
-  width: 350px;
+  width: 250px;
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -128,7 +128,7 @@ export default {};
 }
 .logo img {
   margin: auto;
-  width: 120px;
+  width: 70px;
 }
 .burger-menu {
   display: none;
