@@ -3,7 +3,7 @@
     <div class="tv">
       <iframe
         class="twitch-player"
-        src="https://player.twitch.tv/?channel=skorchyrgk&parent=rgk-uat.netlify.app"
+        src="https://player.twitch.tv/?channel=skorchyrgk&parent=rgk-uat.netlify.app/stream"
         height="100%"
         width="100%"
         frameborder="0"
