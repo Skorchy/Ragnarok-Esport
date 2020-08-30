@@ -3,7 +3,7 @@
     <div class="tv">
       <iframe
         class="twitch-player"
-        src="https://player.twitch.tv/?channel=monstercat&parent=localhost"
+        src="https://player.twitch.tv/?channel=monstercat&parent=https://rgk-uat.netlify.app"
         height="100%"
         width="100%"
         frameborder="0"
