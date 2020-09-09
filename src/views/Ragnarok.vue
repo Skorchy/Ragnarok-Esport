@@ -44,16 +44,19 @@
         </div>
       </template>
     </div>
+    <RgkStaffMember :members="$rgk.staff" />
   </div>
 </template>
 
 <script>
 import RgkH1 from "@/components/RgkH1.vue";
 import RgkTeam from "@/components/RgkTeam.vue";
+import RgkStaffMember from "@/components/RgkStaffMember/RgkStaffMember.vue";
 export default {
   components: {
     RgkH1,
-    RgkTeam
+    RgkTeam,
+    RgkStaffMember
   }
 };
 </script>
@@ -81,8 +84,12 @@ export default {
   color: #c0c0c0;
   margin: auto;
 }
+
+.ragnarok-teams {
+  max-width: 100%;
+}
+
 .rgk-team {
-  width: 80%;
   margin: auto;
 }
 .separator-mobile {
@@ -90,6 +97,7 @@ export default {
 }
 .separator {
   width: 1450px;
+  max-width: calc(100% - 6px);
   height: 100px;
   margin: auto;
   margin-bottom: 80px;
@@ -98,6 +106,7 @@ export default {
   -webkit-border-radius: 10px 0px 10px 0px;
   border: 3px solid #32c1ad;
 }
+
 @media (max-width: 768px) {
   .ragnarok-content {
     width: 100%;

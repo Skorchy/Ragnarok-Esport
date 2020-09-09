@@ -314,7 +314,8 @@ export default {
           month: 10,
           day: 26,
         },
-        photo: "",
+        photo: "zgeg",
+        jeux: ["League of Legends", "Rocket League", "Valorant"]
       },
     },
     {
@@ -328,7 +329,8 @@ export default {
           month: 9,
           day: 5,
         },
-        photo: "",
+        photo: "zgeg",
+        jeux: ["League of Legends", "Fortnite"]
       },
     },
     {
@@ -342,7 +344,8 @@ export default {
           month: 5,
           day: 15,
         },
-        photo: "",
+        photo: "zgeg",
+        jeux: ["League of Legends"]
       },
     },
   ],
