@@ -35,7 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 .rgk-staff-member {
-  width: 1200px;
   max-width: 100%;
   margin-bottom: 150px;
   display: flex;
