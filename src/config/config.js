@@ -304,18 +304,24 @@ export default {
   ],
   staff: [
     {
-      poste: "Président / Brand Manager",
+      poste: "Président / Brand Manager / zgeg interstellaire",
       infos: {
         pseudo: "Skorch",
         nom: "Rose",
-        prenom: "Mickaël",
+        prenom: "Mickael",
         dateOfBirth: {
           year: 1993,
           month: 10,
           day: 26,
         },
         photo: "zgeg",
-        jeux: ["League of Legends", "Rocket League", "Valorant"]
+        description: "<p>Passionné depuis mon plus jeune âge par les jeux-vidéo, je n'ai sans cesse rêvé de devenir un des plus grands joueurs compétitifs. Ne souhaitant plus m'investir en tant que joueur, j'ai décidé de me ranger du côté du management de joueurs. Après une ascension rapide au sein de la structure Abyssal Project Esport au rang de Vice Président, j'ai préféré me tourner vers la création de ma propre structure, suivant mes propres convictions.</p><p>Mon but est d'accompagner au mieux les joueurs défendant nos couleurs, afin de tenter de réaliser leurs rêves. L'Esport est un monde impitoyable et très éphémère, et je ferai tout mon possible pour rendre la structure Ragnarök Esport la plus reconnue et la plus respectée possible.</p>",
+        gamesPlayed: {
+          lolPlayed: true,
+          rlPlayed: true,
+          ftnPlayed: "",
+          valorantPlayed: true
+        }
       },
     },
     {
@@ -329,8 +335,15 @@ export default {
           month: 9,
           day: 5,
         },
+        description: "<p>Salut à tous les amis</p><p>C'est Kalo' La Dingo qui vous parle</p>",
+
         photo: "zgeg",
-        jeux: ["League of Legends", "Fortnite"]
+        gamesPlayed: {
+          lolPlayed: true,
+          rlPlayed: "",
+          ftnPlayed: true,
+          valorantPlayed: ""
+        }
       },
     },
     {
@@ -344,8 +357,16 @@ export default {
           month: 5,
           day: 15,
         },
+        description: "<p>Salut à tous les amis.</p><p>C'est Skadi La BG qui vous parle</p>",
+
         photo: "zgeg",
-        jeux: ["League of Legends"]
+        gamesPlayed: {
+          lolPlayed: true,
+          rlPlayed: "",
+          ftnPlayed: "",
+          valorantPlayed: ""
+        }
+
       },
     },
   ],

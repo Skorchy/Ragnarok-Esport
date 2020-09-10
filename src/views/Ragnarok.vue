@@ -68,7 +68,7 @@ export default {
   flex-direction: column;
   min-height: 500px;
   width: 100%;
-  background: #151515;
+  background: #171717;
   -webkit-box-shadow: inset 0px 5px 7px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: inset 0px 5px 7px 0px rgba(0, 0, 0, 0.75);
   box-shadow: inset 0px 5px 7px 0px rgba(0, 0, 0, 0.75);

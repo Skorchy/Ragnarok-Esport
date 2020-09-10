@@ -36,7 +36,7 @@ export default {};
 <style lang="scss" scoped>
 .work-in-progress {
   padding-top: 300px;
-  background: #151515;
+  background: #171717;
   height: calc(100vh - 300px);
   -webkit-box-shadow: inset 0px 5px 7px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: inset 0px 5px 7px 0px rgba(0, 0, 0, 0.75);

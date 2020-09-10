@@ -52,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 .web-tv {
   padding-top: 160px;
-  background: #151515;
+  background: #171717;
   display: flex;
   align-items: center;
   flex-direction: column;

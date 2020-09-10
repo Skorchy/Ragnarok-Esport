@@ -1,8 +1,17 @@
 <template>
   <div class="rgk-staff-container">
-    <div class="rgk-staff-member" v-for="member in members" :key="member.poste">
-      <RgkStaffDescription />
-      <RgkStaffCard :poste="member.poste" :photo="member.infos.photo" />
+    <div class="rgk-staff-member" v-for="(member,index) in members" :key="member.poste">
+      <RgkStaffCard v-if="(index%2==0)" :poste="member.poste" :photo="member.infos.photo" />
+      <RgkStaffDescription
+        :birthday="member.infos.dateOfBirth"
+        :gamesPlayed="member.infos.jeux"
+        :name="member.infos.nom"
+        :firstName="member.infos.prenom"
+        :nickname="member.infos.pseudo"
+        :description="member.infos.description"
+        :gamesPlayedByMember="member.infos.gamesPlayed"
+      />
+      <RgkStaffCard v-if="(index%2==1)" :poste="member.poste" :photo="member.infos.photo" />
     </div>
   </div>
 </template>
@@ -28,8 +37,7 @@ export default {
 .rgk-staff-member {
   width: 1200px;
   max-width: 100%;
-  margin: 0 10px;
-  margin: auto;
+  margin-bottom: 150px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

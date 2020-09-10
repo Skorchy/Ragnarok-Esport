@@ -93,6 +93,8 @@
 </template>
 
 <script>
+import { getAge } from "@/services/age.js";
+
 export default {
   props: {
     player: {
@@ -103,10 +105,7 @@ export default {
   computed: {
     age() {
       const { year, month, day } = this.player.dateOfBirth;
-      const birthday = new Date(year, month, day);
-      var ageDifMs = Date.now() - birthday.getTime();
-      var ageDate = new Date(ageDifMs); // miliseconds from epoch
-      return Math.abs(ageDate.getUTCFullYear() - 1970);
+      return getAge(year, month, day);
     }
   }
 };
@@ -149,14 +148,14 @@ export default {
   border-top: 1px solid #32c1ad;
 }
 .avatar {
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 110px;
   border: 2px solid #32c1ad;
   background: #101010;
   background-size: cover;
   position: absolute;
-  left: calc(50% - 50px);
-  top: -50px;
+  left: calc(50% - 55px);
+  top: -55px;
   border-radius: 50%;
 }
 .player-character {
