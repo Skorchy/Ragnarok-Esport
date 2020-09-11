@@ -304,7 +304,7 @@ export default {
   ],
   staff: [
     {
-      poste: "Président / Brand Manager / zgeg interstellaire",
+      postes: ["Président", "Brand Manager"],
       infos: {
         pseudo: "Skorch",
         nom: "Rose",
@@ -325,7 +325,7 @@ export default {
       },
     },
     {
-      poste: "Vice-Présidente / Community Manageuse",
+      postes: ["Vice Présidente", "Community Manageuse"],
       infos: {
         pseudo: "Kaloptia",
         nom: "Wattellier",
@@ -347,7 +347,7 @@ export default {
       },
     },
     {
-      poste: "Trésorière / Secrétaire Générale",
+      postes: ["Trésorière", "Secrétaire Générale"],
       infos: {
         pseudo: "Skadi",
         nom: "Rose",
