@@ -1,7 +1,15 @@
 <template>
   <div class="rgk-staff-container">
-    <div class="rgk-staff-member" v-for="(member,index) in members" :key="member.infos.pseudo">
-      <RgkStaffCard v-if="(index%2==0)" :postes="member.postes" :photo="member.infos.photo" />
+    <div
+      class="rgk-staff-member"
+      v-for="(member, index) in members"
+      :key="member.infos.pseudo"
+    >
+      <RgkStaffCard
+        v-if="index % 2 == 0"
+        :postes="member.postes"
+        :photo="member.infos.photo"
+      />
       <RgkStaffDescription
         :birthday="member.infos.dateOfBirth"
         :gamesPlayed="member.infos.jeux"
@@ -11,7 +19,11 @@
         :description="member.infos.description"
         :gamesPlayedByMember="member.infos.gamesPlayed"
       />
-      <RgkStaffCard v-if="(index%2==1)" :postes="member.postes" :photo="member.infos.photo" />
+      <RgkStaffCard
+        v-if="index % 2 == 1"
+        :postes="member.postes"
+        :photo="member.infos.photo"
+      />
     </div>
   </div>
 </template>

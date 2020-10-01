@@ -2,9 +2,9 @@
   <div class="rgk-staff-description-container">
     <hr class="descrption-hr" />
     <RgkH1 class="member-title">
-      {{firstName}} "
-      <em class="blue">{{nickname}}</em>
-      " {{name}}
+      {{ firstName }} "
+      <em class="blue">{{ nickname }}</em>
+      " {{ name }}
     </RgkH1>
     <p v-html="description"></p>
     <div class="games-played">
@@ -207,6 +207,9 @@ export default {
   width: 50%;
   padding: 30px 0;
   color: white;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 .member-title {
   font-size: 28px;

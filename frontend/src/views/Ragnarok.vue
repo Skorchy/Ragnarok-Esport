@@ -3,7 +3,11 @@
     <div class="ragnarok-preview">
       <RgkH1 class="ragnarok-header">RGK ESPORT !</RgkH1>
       <div class="ragnarok-presentation">
-        <p>Ragnarök Esport est une association regroupant des gamers francophones qui ont pour vocation de s'implanter et se faire un nom sur la scène esport européenne.</p>
+        <p>
+          Ragnarök Esport est une association regroupant des gamers francophones
+          qui ont pour vocation de s'implanter et se faire un nom sur la scène
+          esport européenne.
+        </p>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -37,13 +41,17 @@
           }"
         ></div>
         <!-- SEPARATEUR MOBILE -->
-        <div :key="'separator-mobile-' + game.game" class="separator-mobile"></div>
+        <div
+          :key="'separator-mobile-' + game.game"
+          class="separator-mobile"
+        ></div>
         <!-- TEAM DISPLAY -->
         <div v-for="team in game.teams" :key="team.name">
           <RgkTeam class="rgk-team" :team="team" />
         </div>
       </template>
     </div>
+    <div class="separator-mobile"></div>
     <RgkStaffMember :members="$rgk.staff" />
   </div>
 </template>
@@ -78,12 +86,26 @@ export default {
   margin-bottom: 50px;
   text-align: center;
   padding-top: 100px;
+
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+.ragnarok-preview {
+  padding-top: 80px;
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 .ragnarok-presentation {
   width: 80%;
   font-family: "metropolis_extralight";
   color: #c0c0c0;
   margin: auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 
 .ragnarok-teams {
@@ -95,6 +117,7 @@ export default {
 }
 .separator-mobile {
   display: none;
+  margin-bottom: 30px;
 }
 .separator {
   width: 1450px;

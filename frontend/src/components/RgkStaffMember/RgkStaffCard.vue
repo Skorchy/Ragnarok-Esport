@@ -3,8 +3,8 @@
     <div
       class="top"
       :style="{
-          backgroundImage: `url('${require(`../../assets/photos/${photo}.jpg`)}')`,
-        }"
+        backgroundImage: `url('${require(`../../assets/photos/${photo}.jpg`)}')`
+      }"
     ></div>
     <div class="bottom">
       <p class="poste" v-for="poste in postes" :key="poste">
@@ -53,6 +53,9 @@ export default {
   -webkit-box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
   -moz-box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
   box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+  @media (max-width: 1024px) {
+    margin-bottom: 50px;
+  }
 }
 .top {
   min-height: 380px;

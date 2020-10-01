@@ -6,7 +6,9 @@
         <a href="#decouvrir">
           <button class="button">Nous découvrir</button>
         </a>
-        <button class="button button-boutique" :disabled="disabled">Notre boutique</button>
+        <button class="button button-boutique" :disabled="disabled">
+          Notre boutique
+        </button>
       </div>
     </div>
   </div>
@@ -44,10 +46,16 @@ export default {
   @media (max-width: 415px) {
     padding-top: 200px;
   }
+  @media (max-width: 1024px) {
+    padding-top: 170px;
+  }
 }
 .title {
-  @media (max-width: 415px) {
+  margin-bottom: 150px;
+  @media (max-width: 1024px) {
+    width: 85%;
     text-align: center;
+    line-height: 75px;
   }
 }
 .buttons {
@@ -55,7 +63,6 @@ export default {
   min-width: 30%;
   align-items: center;
   justify-content: space-between;
-  margin-top: 300px;
   @media (max-width: 415px) {
     margin-top: 180px;
   }
