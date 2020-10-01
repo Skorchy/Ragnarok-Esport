@@ -1,8 +1,14 @@
 <template>
   <div class="sidebar">
-    <router-link class="routerlink" :to="{ name: 'Ragnarok' }">RagnaröK Esport</router-link>
-    <router-link class="routerlink" :to="{ name: 'WIP' }">Partenaires</router-link>
-    <router-link class="routerlink" :to="{ name: 'WIP' }">Recrutements</router-link>
+    <router-link class="routerlink" :to="{ name: 'Ragnarok' }"
+      >RagnaröK Esport</router-link
+    >
+    <router-link class="routerlink" :to="{ name: 'WIP' }"
+      >Partenaires</router-link
+    >
+    <router-link class="routerlink" :to="{ name: 'WIP' }"
+      >Recrutements</router-link
+    >
     <router-link class="routerlink" :to="{ name: 'WebTv' }">WebTV</router-link>
     <img class="logo-display" src="../assets/logo-sans-fond.png" />
   </div>
@@ -21,6 +27,7 @@ export default {
 <style scoped>
 .sidebar {
   position: absolute;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   background: rgba(10, 10, 10, 0.99);

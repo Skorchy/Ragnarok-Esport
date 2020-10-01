@@ -120,7 +120,7 @@ export default {
   margin-bottom: 30px;
 }
 .separator {
-  width: 1450px;
+  width: 1440px;
   max-width: calc(100% - 6px);
   height: 100px;
   margin: auto;
