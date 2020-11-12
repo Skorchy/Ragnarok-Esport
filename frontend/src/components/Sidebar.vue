@@ -1,14 +1,8 @@
 <template>
   <div class="sidebar">
     <router-link class="routerlink" :to="{ name: 'Ragnarok' }"
-      >RagnaröK Esport</router-link
-    >
-    <router-link class="routerlink" :to="{ name: 'WIP' }"
-      >Partenaires</router-link
-    >
-    <router-link class="routerlink" :to="{ name: 'WIP' }"
-      >Recrutements</router-link
-    >
+      >RagnaröK Esport
+    </router-link>
     <router-link class="routerlink" :to="{ name: 'WebTv' }">WebTV</router-link>
     <img class="logo-display" src="../assets/logo-sans-fond.png" />
   </div>
@@ -19,8 +13,8 @@ export default {
   methods: {
     toggleSidebar() {
       this.$store.commit("toggleSidebar");
-    }
-  }
+    },
+  },
 };
 </script>
 

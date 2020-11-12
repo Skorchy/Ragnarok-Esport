@@ -9,9 +9,9 @@ export default {
           name: "lolTeam",
           players: [
             {
-              pseudo: "RAI",
+              pseudo: "-",
               nom: "-",
-              prenom: "Yacine",
+              prenom: "-",
               dateOfBirth: {
                 year: 1995,
                 month: 8,
@@ -27,24 +27,6 @@ export default {
               igLink: "",
             },
             {
-              pseudo: "HUNTT",
-              nom: "Hours",
-              prenom: "Joan",
-              dateOfBirth: {
-                year: 1996,
-                month: 4,
-                day: 16,
-              },
-              character: "lol/zac.jpg",
-              elo: "diamond",
-              fonction: "Jungle",
-              avatar: "lol/misae.png",
-              twitterLink: "https://twitter.com/HunttAMV",
-              ytbLink: "https://www.youtube.com/user/HunttWithStyle",
-              twitchLink: "https://www.twitch.tv/hunttamv",
-              igLink: "",
-            },
-            {
               pseudo: "XAIRO",
               nom: "Fichot",
               prenom: "Benjamin",
@@ -53,13 +35,31 @@ export default {
                 month: 9,
                 day: 20,
               },
-              character: "lol/yasuo.jpg",
+              character: "lol/leesin.jpg",
               elo: "platinium",
-              fonction: "Midlane",
+              fonction: "Jungle",
               avatar: "lol/xairo.jpg",
               twitterLink: "https://twitter.com/MrKyo1",
               ytbLink: "",
               twitchLink: "https://www.twitch.tv/xairotv",
+              igLink: "",
+            },
+            {
+              pseudo: "SKORCH",
+              nom: "Rose",
+              prenom: "Mickael",
+              dateOfBirth: {
+                year: 1993,
+                month: 10,
+                day: 26,
+              },
+              character: "lol/yasuo.jpg",
+              elo: "gold",
+              fonction: "Midlane",
+              avatar: "lol/skorch.png",
+              twitterLink: "https://twitter.com/RGK_Skorch",
+              ytbLink: "",
+              twitchLink: "https://www.twitch.tv/skorchyrgk",
               igLink: "",
             },
             {
@@ -112,55 +112,55 @@ export default {
           name: "rlTeam",
           players: [
             {
-              pseudo: "Mablo",
-              nom: "Blouet",
-              prenom: "Arthur",
+              pseudo: "Pingu",
+              nom: "D.",
+              prenom: "Julien",
+              dateOfBirth: {
+                year: 2000,
+                month: 9,
+                day: 30,
+              },
+              character: "rl/octanefinal-pingu.png",
+              peak: 1480,
+              fonction: "Joueur",
+              avatar: "rl/pingu.png",
+              twitterLink: "https://twitter.com/PinguTMRL",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
+            },
+            {
+              pseudo: "Siphalow",
+              nom: "D.C",
+              prenom: "Denis",
+              dateOfBirth: {
+                year: 2005,
+                month: 1,
+                day: 31,
+              },
+              character: "rl/dominusfinal-siphalow.jpg",
+              peak: 1575,
+              fonction: "Joueur",
+              avatar: "rl/siphalow.png",
+              twitterLink: "https://twitter.com/siphalow",
+              ytbLink: "",
+              twitchLink: "",
+              igLink: "",
+            },
+            {
+              pseudo: "Droxnos",
+              nom: "H.",
+              prenom: "Alexandre",
               dateOfBirth: {
                 year: 1998,
-                month: 5,
-                day: 7,
-              },
-              character: "rl/octane-mablo.jpg",
-              peak: 1650,
-              fonction: "Joueur",
-              avatar: "lol/misae.png",
-              twitterLink: "",
-              ytbLink: "",
-              twitchLink: "",
-              igLink: "",
-            },
-            {
-              pseudo: "Infinity_RL",
-              nom: "-",
-              prenom: "-",
-              dateOfBirth: {
-                year: 1996,
-                month: 9,
-                day: 20,
-              },
-              character: "rl/octane-infinity.jpg",
-              peak: 1565,
-              fonction: "Joueur (c)",
-              avatar: "lol/misae.png",
-              twitterLink: "",
-              ytbLink: "",
-              twitchLink: "",
-              igLink: "",
-            },
-            {
-              pseudo: "Saumon",
-              nom: "Carceller",
-              prenom: "Erwann",
-              dateOfBirth: {
-                year: 2003,
-                month: 6,
-                day: 19,
+                month: 7,
+                day: 21,
               },
               character: "rl/octane-saumon.jpg",
-              peak: 1565,
+              peak: 1600,
               fonction: "Joueur",
-              avatar: "lol/misae.png",
-              twitterLink: "",
+              avatar: "rl/droxnos.png",
+              twitterLink: "https://twitter.com/Alex_Hyh",
               ytbLink: "",
               twitchLink: "",
               igLink: "",
@@ -170,13 +170,13 @@ export default {
       ],
     },
 
-    // VALORANT ROSTER //
+    // BRAWL STARS ROSTER //
 
     {
-      game: "valorant",
+      game: "brawlstars",
       teams: [
         {
-          name: "valorantTeam",
+          name: "brawlstarsteam",
           players: [
             {
               pseudo: "Mablo",
@@ -315,13 +315,14 @@ export default {
           day: 26,
         },
         photo: "zgeg",
-        description: "<p>Passionné depuis mon plus jeune âge par les jeux-vidéo, je n'ai sans cesse rêvé de devenir un des plus grands joueurs compétitifs. Ne souhaitant plus m'investir en tant que joueur, j'ai décidé de me ranger du côté du management de joueurs. Après une ascension rapide au sein de la structure Abyssal Project Esport au rang de Vice Président, j'ai préféré me tourner vers la création de ma propre structure, suivant mes propres convictions.</p><p>Mon but est d'accompagner au mieux les joueurs défendant nos couleurs, afin de tenter de réaliser leurs rêves. L'Esport est un monde impitoyable et très éphémère, et je ferai tout mon possible pour rendre la structure Ragnarök Esport la plus reconnue et la plus respectée possible.</p>",
+        description:
+          "<p>Passionné depuis mon plus jeune âge par les jeux-vidéo, je n'ai sans cesse rêvé de devenir un des plus grands joueurs compétitifs. Ne souhaitant plus m'investir en tant que joueur, j'ai décidé de me ranger du côté du management de joueurs. Après une ascension rapide au sein de la structure Abyssal Project Esport au rang de Vice Président, j'ai préféré me tourner vers la création de ma propre structure, suivant mes propres convictions.</p><p>Mon but est d'accompagner au mieux les joueurs défendant nos couleurs, afin de tenter de réaliser leurs rêves. L'Esport est un monde impitoyable et très éphémère, et je ferai tout mon possible pour rendre la structure Ragnarök Esport la plus reconnue et la plus respectée possible.</p>",
         gamesPlayed: {
           lolPlayed: true,
           rlPlayed: true,
           ftnPlayed: "",
-          valorantPlayed: true
-        }
+          valorantPlayed: true,
+        },
       },
     },
     {
@@ -335,21 +336,21 @@ export default {
           month: 9,
           day: 5,
         },
-        description: "<p>Salut à tous les amis</p><p>C'est Kalo' La Dingo qui vous parle</p>",
-
+        description:
+          "<p>Salut à tous les amis</p><p>C'est Kalo' La Dingo qui vous parle</p>",
         photo: "zgeg",
         gamesPlayed: {
           lolPlayed: true,
           rlPlayed: "",
           ftnPlayed: true,
-          valorantPlayed: ""
-        }
+          valorantPlayed: "",
+        },
       },
     },
     {
       postes: ["Trésorière", "Secrétaire Générale"],
       infos: {
-        pseudo: "Skadi",
+        pseudo: "Maze",
         nom: "Rose",
         prenom: "Elodie",
         dateOfBirth: {
@@ -357,16 +358,16 @@ export default {
           month: 5,
           day: 15,
         },
-        description: "<p>Salut à tous les amis.</p><p>C'est Skadi La BG qui vous parle</p>",
+        description:
+          "<p>Salut à tous les amis.</p><p>C'est Skadi La BG qui vous parle</p>",
 
         photo: "zgeg",
         gamesPlayed: {
           lolPlayed: true,
           rlPlayed: "",
           ftnPlayed: "",
-          valorantPlayed: ""
-        }
-
+          valorantPlayed: "",
+        },
       },
     },
   ],

@@ -9,22 +9,14 @@
           esport européenne.
         </p>
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          Nous sommes une jeune structure évoluant actuellement sur 4 jeux (
+          League of Legends , Rocket League, Fortnite et Brawl Stars).
         </p>
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          Le principal but de la structure est de faire connaitre ses joueurs
+          pour leur sérieux, leur professionalisme, leur talent. Nous mettons un
+          point d'honneur à évoluer dans un cadre studieux et droit, tout en
+          gardant une part de fun.
         </p>
       </div>
     </div>
@@ -37,13 +29,16 @@
           :key="'separator-' + game.game"
           class="separator"
           :style="{
-            'background-image': `url('${require(`../assets/separators/${game.game}-final-sep.png`)}')`
+            'background-image': `url('${require(`../assets/separators/${game.game}-final-sep.png`)}')`,
           }"
         ></div>
         <!-- SEPARATEUR MOBILE -->
         <div
           :key="'separator-mobile-' + game.game"
           class="separator-mobile"
+          :style="{
+            'background-image': `url('${require(`../assets/separators/${game.game}-final-sep-mobile.png`)}')`,
+          }"
         ></div>
         <!-- TEAM DISPLAY -->
         <div v-for="team in game.teams" :key="team.name">
@@ -51,7 +46,7 @@
         </div>
       </template>
     </div>
-    <div class="separator-mobile"></div>
+    <rgk-h1 class="title-staff">Notre staff</rgk-h1>
     <RgkStaffMember :members="$rgk.staff" />
   </div>
 </template>
@@ -64,8 +59,8 @@ export default {
   components: {
     RgkH1,
     RgkTeam,
-    RgkStaffMember
-  }
+    RgkStaffMember,
+  },
 };
 </script>
 
@@ -83,7 +78,7 @@ export default {
   box-shadow: inset 0px 5px 7px 0px rgba(0, 0, 0, 0.75);
 }
 .ragnarok-header {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   text-align: center;
   padding-top: 100px;
 
@@ -99,7 +94,7 @@ export default {
   }
 }
 .ragnarok-presentation {
-  width: 80%;
+  width: 50%;
   font-family: "metropolis_extralight";
   color: #c0c0c0;
   margin: auto;
@@ -141,8 +136,14 @@ export default {
   .separator-mobile {
     display: block;
     width: 100%;
-    height: 50px;
-    background: red;
+    height: 26px;
+    background-size: cover;
+  }
+}
+.title-staff {
+  margin-bottom: 50px;
+  @media (min-width: 1024px) {
+    margin-bottom: 100px;
   }
 }
 </style>

@@ -7,11 +7,6 @@
           <em class="first-letter">E</em>sport
         </router-link>
       </span>
-      <span class="menu-buttons">
-        <router-link class="routerlink" :to="{ name: 'WIP' }">
-          <em class="first-letter">P</em>artenaires
-        </router-link>
-      </span>
     </div>
     <router-link :to="{ name: 'Home' }">
       <div class="logo">
@@ -19,11 +14,6 @@
       </div>
     </router-link>
     <div class="right-side-header">
-      <span class="menu-buttons">
-        <router-link class="routerlink" :to="{ name: 'WIP' }">
-          <em class="first-letter">R</em>ecrutements
-        </router-link>
-      </span>
       <span class="menu-buttons">
         <router-link class="routerlink" :to="{ name: 'WebTv' }">
           <em class="first-letter">W</em>ebTV

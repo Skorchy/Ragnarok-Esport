@@ -3,17 +3,34 @@
     <RgkH1 class="nosjeux-titre">NOUS SOMMES PRÉSENTS SUR...</RgkH1>
     <RgkHr />
     <div class="blasons">
-      <img class="blason" id="blason-Valorant" src="../assets/blasons/blason_LoL_blue.png" />
-      <img class="blason" id="blason-LoL" src="../assets/blasons/blason_RL_blue.png" />
-      <img class="blason" id="blason-RL" src="../assets/blasons/blason_FN_blue.png" />
-      <img class="blason" id="blason-FN" src="../assets/blasons/blason_valorant_blue.png" />
+      <img
+        class="blason"
+        id="blason-LOL"
+        src="../assets/blasons/blason_LoL_blue.png"
+      />
+      <img
+        class="blason"
+        id="blason-RL"
+        src="../assets/blasons/blason_RL_blue.png"
+      />
+      <img
+        class="blason"
+        id="blason-FN"
+        src="../assets/blasons/blason_FN_blue.png"
+      />
+      <img
+        class="blason"
+        id="blason-BS"
+        src="../assets/blasons/blason_BS.png"
+      />
     </div>
     <button class="nosjeux-button" type="button">
       <div class="unskewed-text">
         <router-link
           class="button-router"
           :to="{ name: 'Ragnarok', hash: '#rgk-teams' }"
-        >Nos Équipes</router-link>
+          >Nos Équipes</router-link
+        >
       </div>
     </button>
   </div>
@@ -25,8 +42,8 @@ import RgkHr from "@/components/RgkHr.vue";
 export default {
   components: {
     RgkH1,
-    RgkHr
-  }
+    RgkHr,
+  },
 };
 </script>
 
@@ -126,11 +143,11 @@ export default {
     width: 50%;
     margin-bottom: 60px;
   }
-  #blason-Valorant,
+  #blason-BS,
   #blason-RL {
     padding-left: 250px;
   }
-  #blason-LoL,
+  #blason-LOL,
   #blason-FN {
     padding-right: 250px;
   }
@@ -150,11 +167,11 @@ export default {
     width: 50%;
     margin-bottom: 40px;
   }
-  #blason-Valorant,
+  #blason-BS,
   #blason-RL {
     padding-left: 130px;
   }
-  #blason-LoL,
+  #blason-LOL,
   #blason-FN {
     padding-right: 130px;
   }
